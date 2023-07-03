@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: "PlayFairDisplay-VariableFont";
+  src: url("/fonts/Playfair_Display/PlayFairDisplay-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 200 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PlayFairDisplay-Italic-VariableFont";
+  src: url("/fonts/Playfair_Display/PlayFairDisplay-Italic-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 200 700;
+  font-display: swap;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Lora-VariableFont";
+  src: url("/fonts/Lora/Lora-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 200 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lora-Italic-VariableFont";
+  src: url("/fonts/Lora/Lora-Italic-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 200 700;
+  font-display: swap;
+  font-style: Italic;
+}
