@@ -76,39 +76,24 @@ export default function Navbar() {
             </Link>
           </div>
           {/* LINKS - Navbar Middle */}
-          <ul className="col-start-6 space-x-10 font-GeneralSans text-md justify-self-center md:flex {<-- Normaali //768px Mobiili --> } hidden">
+          <ul className="col-start-6 space-x-10 font-PlayFairDisplay text-2xl justify-self-center md:flex {<-- Normaali //768px Mobiili --> } hidden">
             <li>
               <Link href="/tarina">
-                <p
-                  className={
-                    pathname === "/tarina" ? "text-coralRed" : "text-darkBlue"
-                  }
-                >
+                <p className="hover:text-cloudberry hover:duration-500">
                   Tarina
                 </p>
               </Link>
             </li>
             <li>
               <Link href="/reference">
-                <p
-                  className={
-                    pathname === "/blogi"
-                      ? "text-coralRed"
-                      : "text-darkBlue"
-                  }
-                >
+                <p className="hover:text-cloudberry hover:duration-500">
                   Blogi
                 </p>
               </Link>
             </li>
             <li>
               <Link href="/info">
-                <p
-                  id="nav-process-btn"
-                  className={
-                    pathname === "/process" ? "text-coralRed" : "text-darkBlue"
-                  }
-                >
+                <p className="hover:text-cloudberry hover:duration-500">
                   Info
                 </p>
               </Link>
@@ -117,10 +102,7 @@ export default function Navbar() {
           {/* CONTACT - Navbar Right */}
           <div className="col-end-13 justify-self-end md:block {<-- Normaali //768px Mobiili --> } hidden whitespace-nowrap">
             <Link href="/contact">
-              <p
-                id="nav-contact-btn"
-                className="px-6 py-2 border-2 rounded-xl font-GeneralSans border-darkGreen //HOVER hover:bg-darkBlue hover:text-white hover:duration-500"
-              >
+              <p className="px-6 py-2 border-2 rounded-xl font-RedHatDisplay border-darkGreen //HOVER hover:bg-cloudberry hover:duration-500">
                 Ota Yhteyttä
               </p>
             </Link>
@@ -160,29 +142,18 @@ export default function Navbar() {
           >
             <div className="flex flex-col h-full w-full px-5 py-[60px] justify-between">
               {/* LINKS */}
-              <ul className="flex flex-col justify-center flex-grow items-center space-y-24 text-2xl font-GeneralSans">
+              <ul className="flex flex-col justify-center flex-grow items-center space-y-24 text-2xl font-PlayFairDisplay">
                 <li>
                   <Link onClick={() => setIsOpen(false)} href="/tarina">
                     <p
-                      className={
-                        pathname === "/tarina"
-                          ? "text-coralRed"
-                          : "text-darkBlue"
-                      }
-                    >
+                      className="hover:text-cloudberry">
                       Tarina
                     </p>
                   </Link>
                 </li>
                 <li>
                   <Link onClick={() => setIsOpen(false)} href="/blogi">
-                    <p
-                      className={
-                        pathname === "/blogi"
-                          ? "text-coralRed"
-                          : "text-darkBlue"
-                      }
-                    >
+                    <p className="hover:text-cloudberry">
                       Blogi
                     </p>
                   </Link>
@@ -190,12 +161,7 @@ export default function Navbar() {
                 <li>
                   <Link onClick={() => setIsOpen(false)} href="/info">
                     <p
-                      className={
-                        pathname === "/info"
-                          ? "text-coralRed"
-                          : "text-darkBlue"
-                      }
-                    >
+                      className="hover:text-cloudberry">
                       Info
                     </p>
                   </Link>
@@ -205,9 +171,7 @@ export default function Navbar() {
               {/* Finnish & CONTACT */}
               <div className="flex justify-center items-center">
                 <Link onClick={() => setIsOpen(false)} href="/contact">
-                  <p
-                    className="px-10 py-2 border-[1px] rounded-xl border-darkBlue //HOVER hover:bg-darkBlue hover:text-white hover:duration-500"
-                  >
+                  <p className="px-10 py-2 border-[1px] rounded-xl border-darkBlue //HOVER hover:bg-cloudberry hover:duration-500">
                     Ota Yhteyttä
                   </p>
                 </Link>
