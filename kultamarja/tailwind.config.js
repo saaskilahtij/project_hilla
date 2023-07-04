@@ -5,6 +5,7 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+
   theme: {
     fontFamily: {
       PlayFairDisplay: ["PlayfairDisplay-VariableFont", "sans-serif"],
@@ -12,6 +13,9 @@ module.exports = {
       Lora: ["Lora-VariableFont", "sans-serif"],
       LoraItalic: ["Lora-Italic-VariableFont", "sans-serif"],
     },
+    colors : {
+      darkGreen: "#013220",
+    }
   },
   plugins: [],
 }
