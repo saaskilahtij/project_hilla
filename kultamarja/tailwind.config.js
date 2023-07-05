@@ -16,7 +16,11 @@ module.exports = {
     colors : {
       darkGreen: "#013220",
       cloudberry: "#FF9204",
-    }
+      vanilla: "#F3E5AB",
+    },
+    screens : {
+
+    },
   },
   plugins: [],
 }

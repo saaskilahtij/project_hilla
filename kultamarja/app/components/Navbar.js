@@ -66,17 +66,19 @@ export default function Navbar() {
         {/* Desktop */}
         <div className="z-50 px-5 relative w-screen grid gap-[1rem] grid-cols-12 bg-white bg-opacity-20 backdrop-filter backdrop-blur-md items-center min-h-[60px]">
           {/* TITLE - Navbar Left */}
-          <div className="justify-self-start z-50 col-start-1">
+          <div className="justify-self-start z-50 col-start-1 w-[50px] h-[50px]">
             <Link href="/" onClick={() => setIsOpen(false)}>
               <Image
                 src={Logo}
                 alt="Kultamarjan hilla logo"
-                className="w-[50px]"
+                width={50}
+                height={50}
+
               /> 
             </Link>
           </div>
           {/* LINKS - Navbar Middle */}
-          <ul className="col-start-6 space-x-10 font-PlayFairDisplay text-2xl justify-self-center md:flex {<-- Normaali //768px Mobiili --> } hidden">
+          <ul className="col-start-6 space-x-24 font-PlayFairDisplay text-2xl justify-self-center md:flex {<-- Normaali //768px Mobiili --> } hidden">
             <li>
               <Link href="/tarina">
                 <p className="hover:text-cloudberry hover:duration-500">
@@ -85,7 +87,7 @@ export default function Navbar() {
               </Link>
             </li>
             <li>
-              <Link href="/reference">
+              <Link href="/blogi">
                 <p className="hover:text-cloudberry hover:duration-500">
                   Blogi
                 </p>
@@ -100,13 +102,13 @@ export default function Navbar() {
             </li>
           </ul>
           {/* CONTACT - Navbar Right */}
-          <div className="col-end-13 justify-self-end md:block {<-- Normaali //768px Mobiili --> } hidden whitespace-nowrap">
+          {/* <div className="col-end-13 justify-self-end md:block {<-- Normaali //768px Mobiili --> } hidden whitespace-nowrap">
             <Link href="/contact">
-              <p className="px-6 py-2 border-2 rounded-xl font-RedHatDisplay border-darkGreen //HOVER hover:bg-cloudberry hover:duration-500">
+              <p className="px-6 py-2 border-2 rounded-xl font-PlayFairDisplay border-darkGreen //HOVER hover:bg-cloudberry hover:duration-500">
                 Ota Yhteyttä
               </p>
             </Link>
-          </div>
+          </div> */}
 
           {/* Hamburger menu */}
           <div
@@ -114,13 +116,13 @@ export default function Navbar() {
             onClick={() => setIsOpen(!isOpen)}
           >
           <span
-              className={`block rounded-lg h-[3px]  bg-darkGreen duration-1000 transform transition-all ${
-                isOpen ? "translate-x-1.5 w-6" : "w-8"
+              className={`block rounded-lg h-[3px] duration-1000 transform transition-all ${
+                isOpen ? "translate-x-1.5 w-6 bg-cloudberry" : "bg-darkGreen w-8"
               }`}
             />
             <span
-              className={`block rounded-lg h-[3px]  bg-darkGreen duration-1000 transform transition-all ${
-                isOpen ? "translate-x-1.5 w-8" : "w-6"
+              className={`block rounded-lg h-[3px] duration-1000 transform transition-all ${
+                isOpen ? "translate-x-1.5 w-8 bg-cloudberry" : "bg-darkGreen w-6"
               }`}
             />
           </div>
@@ -146,14 +148,14 @@ export default function Navbar() {
                 <li>
                   <Link onClick={() => setIsOpen(false)} href="/tarina">
                     <p
-                      className="hover:text-cloudberry">
+                      className="hover:text-vanilla text-cloudberry">
                       Tarina
                     </p>
                   </Link>
                 </li>
                 <li>
                   <Link onClick={() => setIsOpen(false)} href="/blogi">
-                    <p className="hover:text-cloudberry">
+                    <p className="hover:text-vanilla text-cloudberry">
                       Blogi
                     </p>
                   </Link>
@@ -161,7 +163,7 @@ export default function Navbar() {
                 <li>
                   <Link onClick={() => setIsOpen(false)} href="/info">
                     <p
-                      className="hover:text-cloudberry">
+                      className="hover:text-vanilla text-cloudberry">
                       Info
                     </p>
                   </Link>
@@ -169,19 +171,19 @@ export default function Navbar() {
               </ul>
 
               {/* Finnish & CONTACT */}
-              <div className="flex justify-center items-center">
+              {/* <div className="flex justify-center items-center">
                 <Link onClick={() => setIsOpen(false)} href="/contact">
-                  <p className="px-10 py-2 border-[1px] rounded-xl border-darkBlue //HOVER hover:bg-cloudberry hover:duration-500">
+                  <p className="px-10 py-2 border-[1px] rounded-xl font-PlayFairDisplay border-darkGreen //HOVER hover:bg-cloudberry hover:duration-500">
                     Ota Yhteyttä
                   </p>
                 </Link>
-              </div>
+              </div> */}
             </div>
           </div>
 
           {/* Mobile Second Back */}
           <div
-            className={`z-30 absolute top-0 left-0 bg-oceanBlue h-screen w-full ${
+            className={`z-30 absolute top-0 left-0 bg-darkGreen h-screen w-full ${
               isOpen
                 ? "translate-y-0 duration-[1s]"
                 : "-translate-y-full duration-[1.4s]"
