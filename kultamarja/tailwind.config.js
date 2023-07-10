@@ -19,7 +19,7 @@ module.exports = {
       vanilla: "#F3E5AB",
     },
     screens : {
-
+      md: "768px",
     },
   },
   plugins: [],

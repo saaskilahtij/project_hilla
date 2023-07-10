@@ -1,15 +1,31 @@
 'use client';
 // Imports
 import Link from "next/link";
+
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import Logo from "/public/pictures/cloudberry.png"
-import { ArrowDownOutline } from 'react-ionicons'
+
+
 /* MAIN */
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
+
+
+  // Scroll to contact section
+  const scrollToContact = () => {
+    if (pathname === "/") {
+      document.getElementById("contactForm").scrollIntoView({ behavior: "smooth" });
+    } else {
+      console.log("not at home");
+      window.location.href = "/#contactForm";
+      setTimeout(() => {
+        return document.getElementById("contactForm").scrollIntoView({ behavior: "smooth" });
+      }, 2000);
+    }
+  };
 
   // Navigation Path
   const pathname = usePathname();
@@ -73,9 +89,11 @@ export default function Navbar() {
                 alt="Kultamarjan hilla logo"
                 width={50}
                 height={50}
-
-              /> 
+              />
             </Link>
+            <p className="relative font-PlayFairDisplay italic right-[-50px] top-[-50px] whitespace-nowrap">
+              Luku 1.0  
+            </p> 
           </div>
           {/* LINKS - Navbar Middle */}
           <ul className="col-start-6 space-x-24 font-PlayFairDisplay text-2xl justify-self-center md:flex {<-- Normaali //768px Mobiili --> } hidden">
@@ -102,13 +120,13 @@ export default function Navbar() {
             </li>
           </ul>
           {/* CONTACT - Navbar Right */}
-          {/* <div className="col-end-13 justify-self-end md:block {<-- Normaali //768px Mobiili --> } hidden whitespace-nowrap">
-            <Link href="/contact">
+          <div className="col-end-13 justify-self-end md:block {<-- Normaali //768px Mobiili --> } hidden whitespace-nowrap">
+            <button onClick={ scrollToContact }>
               <p className="px-6 py-2 border-2 rounded-xl font-PlayFairDisplay border-darkGreen //HOVER hover:bg-cloudberry hover:duration-500">
                 Ota Yhteyttä
               </p>
-            </Link>
-          </div> */}
+            </button>
+          </div>
 
           {/* Hamburger menu */}
           <div
@@ -171,13 +189,16 @@ export default function Navbar() {
               </ul>
 
               {/* Finnish & CONTACT */}
-              {/* <div className="flex justify-center items-center">
-                <Link onClick={() => setIsOpen(false)} href="/contact">
-                  <p className="px-10 py-2 border-[1px] rounded-xl font-PlayFairDisplay border-darkGreen //HOVER hover:bg-cloudberry hover:duration-500">
+              <div className="flex justify-center items-center">
+                <button onClick={() => {
+                  setIsOpen(false);
+                  scrollToContact();
+                  }} href="/contact">
+                  <p className="px-10 py-2 border-[1px] rounded-xl font-PlayFairDisplay bg-cloudberry border-darkGreen //HOVER hover:bg-vanilla hover:duration-500">
                     Ota Yhteyttä
                   </p>
-                </Link>
-              </div> */}
+                </button>
+              </div>
             </div>
           </div>
 
