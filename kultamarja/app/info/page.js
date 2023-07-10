@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Info1 from "/public/pictures/info_1.png";
 import Joonatan from "/public/pictures/headshot_joonatan.jpg"; 
-import Topu from "/public/pictures/headshot_topias.jpg";
+import Eero from "/public/pictures/headshot_eero.jpg";
 import Johan from "/public/pictures/headshot_johan.jpeg";
 
 
@@ -65,7 +65,7 @@ export default function Home() {
         </div>
         <div className="flex flex-col items-center justify-center mt-10">
           <Image
-            src={Topu}
+            src={Eero}
             alt="Marjanpoimija Topias"
             width={300}
             height={300}

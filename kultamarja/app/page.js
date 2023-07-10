@@ -1,9 +1,16 @@
 'use client';
 
+// q: How do I make this a production build?
+// a: npm run build
+
+// q: Build failed because of webpack errors?
+// a: npm install --save-dev webpack@4 webpack-cli@3
+
+
 import Image from 'next/image'
 import Berry1 from 'public/pictures/landing_berry1.png'
 import Berry2 from 'public/pictures/landing_berry2.png'
-import { getCloudberries } from '@/sanity/sanity-utils';
+// import { getCloudberries } from '@/sanity/sanity-utils';
 
 import validator from 'validator';
 import { useState } from 'react';
@@ -15,7 +22,7 @@ export default function Home() {
 
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-  const [cloudberriesAmount, setCloudberriesAmount] = useState('');
+  // const [cloudberriesAmount, setCloudberriesAmount] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();

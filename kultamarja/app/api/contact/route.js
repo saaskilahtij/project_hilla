@@ -7,13 +7,11 @@ const KEY = "mpox ocft xksl qwph"
 // a: I had to enable less secure apps in my gmail account settings
 // https://myaccount.google.com/lesssecureapps
 
-export async function POST(req, res) {
+export async function POST(req ) {
   
   if (req.method === "POST") {
     const body = await req.json();
     const { email, message } = body;
-
-
 
     const transporter = nodemailer.createTransport({
       service: 'gmail',

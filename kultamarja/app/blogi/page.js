@@ -7,13 +7,22 @@ import Image from "next/image";
 
 export default function Home () {
 
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [screenWidth, setScreenWidth] = useState(null);
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    window.addEventListener('resize', () => { setScreenWidth(window.innerWidth) });
+    // set screenWidth when component mounts
+    setScreenWidth(window.innerWidth);
+    // then update screenWidth whenever window resizes
+    const handleResize = () => { setScreenWidth(window.innerWidth) };
+    window.addEventListener('resize', handleResize);
     getProjects().then(data => setProjects(data));
+
+    // Remember to remove event listener when the component unmounts
+    return () => window.removeEventListener('resize', handleResize);
   }, [])
+
+  if (!screenWidth) return null;
 
   return(
     <main className="flex flex-col justify-center items-center mt-2 font-Lora">
@@ -27,9 +36,9 @@ export default function Home () {
           Vielä ei mennä, vielä suunnitellaan.
         </h2>
       </div>
-        {projects.map((project) => {
+        {projects.map((project, index) => {
           return(
-            <div id={project._id}
+            <div key={index} id={project._id}
               className="w-[300px] mt-24
               md:w-[600px]">
               <div className="flex flex-row justify-between text-xl

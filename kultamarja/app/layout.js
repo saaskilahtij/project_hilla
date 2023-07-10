@@ -1,9 +1,9 @@
 import './globals.css'
+import PropTypes from 'prop-types';
 import { Inter } from 'next/font/google'
 
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
-import Head from 'next/head'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -22,7 +22,8 @@ export const metadata = {
   ]
 }
 
-export default function RootLayout({ children }) {
+
+ function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
@@ -37,3 +38,9 @@ export default function RootLayout({ children }) {
     </html>
   )
 }
+
+RootLayout.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export default RootLayout;
