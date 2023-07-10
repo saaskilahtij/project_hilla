@@ -38,7 +38,8 @@ export default function Home() {
         </div>
         <div className="flex items-center justify-center mt-10">
           <Image
-            src={Info1}  
+            src={Info1}
+            alt="Hillan kukka"  
             width={300}
             height={300}
             className="w-auto border-2 border-darkGreen shadow-lg"
@@ -53,34 +54,37 @@ export default function Home() {
         <div className="flex flex-col items-center justify-center mt-10">
           <Image
             src={Joonatan}
+            alt="Marjanpoimija Joonatan"
             width={300}
             height={300}
             className="border-2 border-darkGreen shadow-lg"
           />
           <p className="mt-2 w-[300px] text-start text-xl">
-            Joonatan Höyhtyä
+            Joonatan Höyhtyä 😆
           </p>
         </div>
         <div className="flex flex-col items-center justify-center mt-10">
           <Image
             src={Topu}
+            alt="Marjanpoimija Topias"
             width={300}
             height={300}
             className="border-2 border-darkGreen shadow-lg"
           />
           <p className="mt-2 w-[300px] text-start text-xl">
-            Topias Hintsala
+            Topias Hintsala 😎
           </p>
         </div>
         <div className="flex flex-col items-center justify-center mt-10">
           <Image
             src={Johan}
+            alt="Marjanpoimija Johan"
             width={300}
             height={300}
             className="border-2 border-darkGreen shadow-lg"
           />
           <p className="mt-2 w-[300px] text-start text-xl">
-            Johan Sääskilahti
+            Johan Sääskilahti 🧐
           </p>
         </div> 
       </div>

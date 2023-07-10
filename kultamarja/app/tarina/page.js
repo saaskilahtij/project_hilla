@@ -24,6 +24,7 @@ export default function Home() {
         </p>
         <Image 
           src={Tarina1}
+          alt="Hillankerääjät vaeltamassa pimeää taivasta vasten" 
           className="w-[300px] border-4 border-darkGreen shadow-lg mt-4"
         />
       </div>
@@ -36,6 +37,7 @@ export default function Home() {
         </p>
         <Image
           src={Tarina2}
+          alt="Lähikuva marjastajan kengästä"
           className="w-[300px] border-4 border-darkGreen shadow-lg mt-4"
         />
       </div>
@@ -48,6 +50,7 @@ export default function Home() {
         </p>
         <Image
           src={Tarina3}
+          alt="Lähikuva ihmisistä öistä taivasta vasten"
           className="w-[300px] border-4 border-darkGreen shadow-lg mt-4"
         />
       </div>
@@ -60,6 +63,7 @@ export default function Home() {
         </p>
         <Image
           src={Tarina4}
+          alt="Lähikuva kompassista vuorten ja metsän keskellä"
           className="w-[300px] border-4 border-darkGreen shadow-lg mt-4"
         />
       </div>
@@ -72,6 +76,7 @@ export default function Home() {
         </p>
         <Image
           src={Tarina5}
+          alt="Kuva Helsingin Tuomiokirkosta"
           className="w-[300px] border-4 border-darkGreen shadow-lg mt-4"
         />
       </div>
@@ -84,6 +89,7 @@ export default function Home() {
         </p>
         <Image
           src={Tarina6}
+          alt="Kuksa joka on täytetty hilloilla"
           className="w-[300px] border-4 border-darkGreen shadow-lg mt-4"
         />
       </div>

@@ -39,6 +39,8 @@ export default function Home () {
               </div>
               <Image 
                 src={project.image}
+                // Vedä alt tänne
+                alt="Blogi kuva"
                 width={screenWidth < 768 
                   ? 300
                   : 600}

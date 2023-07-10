@@ -81,6 +81,7 @@ export default function Home() {
         <div className='flex flex-col items-center justify-center md:ml-16'>
           <Image 
             src={ Berry1 }
+            alt="Lähikuva hillasta"
             className="w-[300px] border-2 border-darkGreen shadow-lg"
           />
           <p className='font-Lora italic text-lg w-[300px] mt-2'>
@@ -114,6 +115,7 @@ export default function Home() {
         <div className='md:mr-16'>
           <Image
             src={Berry2}
+            alt="Lähikuva raa'asta hillasta"
             width={300}
             height={300}
             className="border-2 border-darkGreen shadow-lg"
@@ -136,11 +138,11 @@ export default function Home() {
         </div>
       </div>
       <div>
-        <h5 className='text-4xl mt-16 text-center' >
+        <h5 className='text-4xl md:text-5xl mt-20 md:mt-24 md:text-center' >
           Vielä voi tilata!
         </h5>
-        <p className='text-xl italic text-center mt-2'>
-          Hillaa kerätty: 0 kg / 300 kg
+        <p className='text-xl md:text-2xl italic md:text-center mt-2 md:mt-4 mb-10 md:mb-14'>
+          Hillaa kerätty: <span className='text-cloudberry text-3xl'>0</span> kg / <span className='text-cloudberry text-3xl'>300</span> kg
         </p>
       </div>
       <div className='flex flex-col'>
