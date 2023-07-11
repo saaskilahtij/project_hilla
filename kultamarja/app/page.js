@@ -167,7 +167,7 @@ export default function Home() {
           Vielä voi tilata!
         </h5>
         <p className='text-xl md:text-2xl italic md:text-center mt-2 md:mt-4 mb-10 md:mb-14'>
-          Hillaa kerätty: <span className='text-cloudberry'>0 kg / 300 kg </span>
+          Hillaa kerätty: <span className='text-cloudberry'>0 Litraa / 300 Litraa </span>
         </p>
       </div>
       <div className='flex flex-col'>
