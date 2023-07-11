@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
+ 
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -27,6 +28,7 @@ export const metadata = {
   return (
     <html lang="en">
       <head>
+        <link rel='shortcut icon' href='/favicon_io/favicon.ico'/>
       </head>
       <body className={inter.className}>
         <Navbar/>

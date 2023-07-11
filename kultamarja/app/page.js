@@ -12,7 +12,6 @@ import { useState, useRef, useEffect } from 'react';
 import gsap from 'gsap';
 
 
-
 export default function Home() {
 
   const [email, setEmail] = useState('');
