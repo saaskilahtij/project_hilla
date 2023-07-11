@@ -73,7 +73,7 @@ export default function Home () {
                 block.children.map(child => {
                   return (
                     <p key={child._key}
-                      className="mt-2 text-lg md:text-xl">
+                      className="mt-4 text-lg md:text-xl">
                       {child.text}
                     </p>
                   );
