@@ -1,14 +1,23 @@
 'use client';
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { getProjects } from "@/sanity/sanity-utils";
 import Image from "next/image";
+
+
+//todo: create animations for the headers using gsap
+// first header should fade in from the left
+// second header should fade in from the right
+
 
 
 export default function Home () {
 
   const [screenWidth, setScreenWidth] = useState(null);
   const [projects, setProjects] = useState([]);
+  const header1 = useRef(null);
+  const header2 = useRef(null);
+
 
   useEffect(() => {
     // set screenWidth when component mounts
@@ -21,18 +30,20 @@ export default function Home () {
     // Remember to remove event listener when the component unmounts
     return () => window.removeEventListener('resize', handleResize);
   }, [])
-
+  
   if (!screenWidth) return null;
 
   return(
     <main className="flex flex-col justify-center items-center mt-2 font-Lora">
       <div className="font-PlayFairDisplay mt-[50px]">
-        <h1 className="text-4xl 
-          md:text-5xl">
+        <h1 ref={header1}
+          className="text-4xl 
+            md:text-5xl">
           Täällä kerrotaan missä mennään!
         </h1>
-        <h2 className="text-4xl mt-2
-          md:text-5xl">
+        <h2 ref={header2}
+          className="text-4xl mt-2
+            md:text-5xl">
           Vielä ei mennä, vielä suunnitellaan.
         </h2>
       </div>

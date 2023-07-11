@@ -3,9 +3,6 @@ import nodemailer from 'nodemailer';
 const EMAIL = "teamkultamarja@gmail.com"
 const KEY = "mpox ocft xksl qwph"
 
-// q: I had internal server error 500 when I tried to send the email, why?
-// a: I had to enable less secure apps in my gmail account settings
-// https://myaccount.google.com/lesssecureapps
 
 export async function POST(req ) {
   

@@ -10,7 +10,7 @@ import Link from "next/link";
 export default function Footer() {
 
     return (
-        <footer className="flex flex-col items-center justify-center w-full h-24 border-t-2 border-darkGreen mt-16 py-16">
+        <footer className="flex flex-col items-center justify-center w-full h-24 border-t-2 border-darkGreen mt-16 py-16 md:mt-24">
             <div className="flex flex-row items-center justify-center space-x-16 mt-4">
                 <p className="text-xl font-PlayFairDisplay
                     md:text-2xl">

@@ -1,10 +1,5 @@
 'use client';
 
-// q: How do I make this a production build?
-// a: npm run build
-
-// q: Build failed because of webpack errors?
-// a: npm install --save-dev webpack@4 webpack-cli@3
 
 
 import Image from 'next/image'
@@ -13,9 +8,9 @@ import Berry2 from 'public/pictures/landing_berry2.png'
 // import { getCloudberries } from '@/sanity/sanity-utils';
 
 import validator from 'validator';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
+import gsap from 'gsap';
 
-// todo: fetch the amount of cloudberries from sanity
 
 
 export default function Home() {
@@ -23,6 +18,11 @@ export default function Home() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   // const [cloudberriesAmount, setCloudberriesAmount] = useState('');
+
+  const header1 = useRef(null);
+  const header2 = useRef(null);
+  const header3 = useRef(null);
+  const header4 = useRef(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -54,37 +54,56 @@ export default function Home() {
     setEmail('');
     setMessage('');
   }
+
+  useEffect(() => {
+    // Make sure our elements are available
+    if (header1.current && header2.current && header3.current && header4.current) {
+      // Create a timeline for our animation
+      const timeline = gsap.timeline();
+  
+      // Add animations to the timeline
+      timeline
+        .fromTo(header1.current, { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: 1 })
+        .fromTo(header2.current, { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: 1 })
+        .fromTo(header3.current, { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: 1 })
+        .fromTo(header4.current, { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: 1 });
+    }
+  }, []); 
   
   // getCloudberries().then(data => console.log(data));
 
   return (
     <main className="font-PlayFairDisplay text-darkGreen overflow-hidden">
-      <div className='flex flex-col items-center text-center mt-14 md:mt-24'>
-        <h1 className='flex flex-col text-4xl text-left w-[300px]
-          md:w-full md:flex md:flex-row md:whitespace-nowrap md:items-center md:justify-center md:text-5xl'>
-          Lakka, 
-          <span>
-            {' '}Lapin Lahja Ihmiselle.
+      <div className='flex flex-col items-center text-center mt-14 md:mt-[150px]'>
+        <h1 ref={header1} 
+          className='flex flex-col text-4xl text-left w-[300px]
+            md:w-full md:flex md:flex-row md:whitespace-nowrap md:items-center md:justify-center md:text-5xl'>
+          Lakka,
+          <span className='md:ml-3'>
+            Lapin Lahja Ihmiselle.
           </span>
         </h1>
         <div className='flex flex-col w-[300px] mt-10 text-2xl space-y-4
-        md:space-y-8 md:w-full md:text-3xl' >
-          <p className='flex
-          md:relative md:flex-col md:items-center md:justify-center md:text-center md:left-[-150px]'>
+            md:space-y-8 md:w-full md:text-3xl' >
+          <p ref={header2}
+            className='flex
+              md:relative md:flex-col md:items-center md:justify-center md:text-center md:left-[-150px]'>
             Hehkuva hilla,
           </p>
-          <p className='relative left-[-20px]
-          md:flex-col md:items-center md:justify-center'>
+          <p ref={header3}
+            className='relative left-[-20px]
+              md:flex-col md:items-center md:justify-center'>
             tähtinen timantti,
           </p>
-          <p className='text-right
-          md:relative md:flex-col md:text-center md:items-center md:justify-center md:right-[-150px]'>
+          <p ref={header4}
+            className='text-right
+              md:relative md:flex-col md:text-center md:items-center md:justify-center md:right-[-150px]'>
             säteilevä suomuurain.
           </p>
         </div>
       </div>
       <div className='flex flex-col mt-24 space-x-4 items-center
-        md:flex md:flex-row-reverse md:justify-between'>
+        md:flex md:flex-row-reverse md:justify-between md:mt-[250px]'>
         <div className='flex flex-col items-center justify-center md:ml-16'>
           <Image 
             src={ Berry1 }
@@ -95,7 +114,7 @@ export default function Home() {
             <span className='text-xl font-PlayFairDisplay'>
               Hilla:
             </span>
-            <span className='relative right-[-30px]'>
+            <span className='relative right-[-15px]'>
               {' '} 1. Muurain, varsinkin sen 
               <span className='relative right-[-70px]'>
                 {' '}(kypsä) marja, lakka.
@@ -149,12 +168,12 @@ export default function Home() {
           Vielä voi tilata!
         </h5>
         <p className='text-xl md:text-2xl italic md:text-center mt-2 md:mt-4 mb-10 md:mb-14'>
-          Hillaa kerätty: <span className='text-cloudberry text-3xl'>0</span> kg / <span className='text-cloudberry text-3xl'>300</span> kg
+          Hillaa kerätty: <span className='text-cloudberry'>0 kg / 300 kg </span>
         </p>
       </div>
       <div className='flex flex-col'>
         <h5 className='text-4xl mt-16
-        md:text-5xl'>
+        md:text-5xl md:mt-28'>
           Jos halajat hillaa,
           otathan yhteyttä.
         </h5>
@@ -182,7 +201,7 @@ export default function Home() {
               />
               <label htmlFor='message'>
                 <h5 className='text-2xl mt-6'>
-                  Viestisi:
+                  Viestisi, kuinka paljon hillaa ja minne:
                 </h5>
               </label>
               <textarea

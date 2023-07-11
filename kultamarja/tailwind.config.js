@@ -8,8 +8,8 @@ module.exports = {
 
   theme: {
     fontFamily: {
-      PlayFairDisplay: ["PlayfairDisplay-VariableFont", "sans-serif"],
-      PlayFairDisplayItalic: ["PlayFairDisplay-Italic-VariableFont", "sans-serif"],
+      PlayFairDisplay: ["PlayfairDisplay-VariableFont", "serif"],
+      PlayFairDisplayItalic: ["PlayFairDisplay-Italic-VariableFont", "serif"],
       Lora: ["Lora-VariableFont", "sans-serif"],
       LoraItalic: ["Lora-Italic-VariableFont", "sans-serif"],
     },

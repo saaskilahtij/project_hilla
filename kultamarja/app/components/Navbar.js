@@ -8,6 +8,11 @@ import { useState, useEffect } from "react";
 import Logo from "/public/pictures/cloudberry.png"
 
 
+// All credit to Don Hämäläinen Boggo Oy who programmed this beauty.
+// Only thing I did was to add the scrollToContact function, changed the content and the styling of the navbar 
+// and the mobile button animation.
+
+
 /* MAIN */
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
