@@ -20,6 +20,7 @@ export const metadata = {
     "hilla",
     "marjan myynti",
     "marjojen myynti",
+    "kultamarja",
   ]
 }
 
