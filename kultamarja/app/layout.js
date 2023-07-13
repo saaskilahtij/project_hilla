@@ -27,7 +27,7 @@ export const metadata = {
 
  function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="fi">
       <head>
         <link rel='shortcut icon' href='/favicon_io/favicon.ico'/>
       </head>
