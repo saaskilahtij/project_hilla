@@ -13,6 +13,7 @@ import Logo from "/public/pictures/cloudberry.png"
 // and the mobile button animation.
 
 
+
 /* MAIN */
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -95,10 +96,13 @@ export default function Navbar() {
                 width={50}
                 height={50}
               />
-            </Link>
-            <p className="relative font-PlayFairDisplay italic right-[-50px] top-[-50px] whitespace-nowrap">
+           {/*  <p className="relative font-PlayFairDisplay italic right-[-50px] top-[-50px] whitespace-nowrap">
               Luku 1.0  
-            </p> 
+            </p>  */}
+            <p className={`relative font-PlayFairDisplay italic top-[-6px] ${isHidden ? '-translate-y-2 duration-1000' : ' '}`}>
+              Etusivulle
+            </p>
+            </Link>
           </div>
           {/* LINKS - Navbar Middle */}
           <ul className="col-start-6 space-x-24 font-PlayFairDisplay text-2xl justify-self-center md:flex {<-- Normaali //768px Mobiili --> } hidden">

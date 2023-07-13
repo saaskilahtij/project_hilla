@@ -11,7 +11,7 @@ export default function Footer() {
 
     return (
         <footer className="flex flex-col items-center justify-center w-full h-24 border-t-2 border-darkGreen mt-16 py-16 md:mt-24">
-            <div className="flex flex-row items-center justify-center space-x-16 mt-4">
+            <div className="flex flex-row items-center justify-center space-x-16 mt-20">
                 <p className="text-xl font-PlayFairDisplay
                     md:text-2xl">
                     <Link href="/tarina">
@@ -39,6 +39,17 @@ export default function Footer() {
                     </Link>
                 </p>
             </div>
+                <div className="flex flex-row w-full justify-between font-PlayFairDisplay italic text-start">
+                    <p className="mx-5 my-2 text-md">
+                        2023 Kultamarja © 
+                    </p>
+                    {/* <p className="mx-5 text-md">
+                        Luku {' '}
+                        <span className="text-cloudberry text-2xl">
+                            1.0
+                        </span>
+                    </p> */}
+                </div>
         </footer>
     );
 }

@@ -1,6 +1,3 @@
-
-
-
 import Image from 'next/image'
 import Berry1 from 'public/pictures/landing_berry1.png'
 import Berry2 from 'public/pictures/landing_berry2.png'
@@ -17,7 +14,6 @@ export default function Home() {
   
   // getCloudberries().then(data => console.log(data));
 
-  
 
   return (
     <main className="font-PlayFairDisplay text-darkGreen overflow-hidden">
