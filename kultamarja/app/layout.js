@@ -15,8 +15,10 @@ export const metadata = {
     "hillaa",
     "hillan myynti",
     "hillan keräys",
-    "hillaa oulu",
-    "hillaa lappi",
+    "hillaa Oulu",
+    "hillaa Lappi",
+    "hillaa Rovaniemi",
+    "osta hillaa",
     "hilla",
     "marjan myynti",
     "marjojen myynti",
@@ -24,10 +26,17 @@ export const metadata = {
   ]
 }
 
+// q: Can I write this entire application in Rust?
+// a: Yes, but you shouldn't.
+// q: Why not?
+// a: Because it's a bad idea.
+// q: Why is it a bad idea?
+// a: Because it's a bad idea.
+
 
  function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="fi">
       <head>
         <link rel='shortcut icon' href='/favicon_io/favicon.ico'/>
       </head>
