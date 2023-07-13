@@ -99,8 +99,14 @@ export default function Navbar() {
            {/*  <p className="relative font-PlayFairDisplay italic right-[-50px] top-[-50px] whitespace-nowrap">
               Luku 1.0  
             </p>  */}
-            <p className={`relative font-PlayFairDisplay italic top-[-6px] ${isHidden ? '-translate-y-2 duration-1000' : ' '}`}>
-              Etusivulle
+            <p className={`relative font-PlayFairDisplay text-black duration-1000 italic top-[-6px] 
+              ${isHidden 
+              ? '-translate-y-2 duration-1000' 
+              : ' '} 
+              ${isOpen
+              ? 'text-cloudberry duration-1000'
+              : ' '}`}>
+                Etusivulle
             </p>
             </Link>
           </div>
