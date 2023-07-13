@@ -1,7 +1,9 @@
 import nodemailer from 'nodemailer';
 
+
 const EMAIL = "teamkultamarja@gmail.com"
 const KEY = "mpox ocft xksl qwph"
+
 
 
 export async function POST(req ) {

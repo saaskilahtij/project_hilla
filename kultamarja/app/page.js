@@ -1,4 +1,3 @@
-'use client';
 
 
 
@@ -7,100 +6,22 @@ import Berry1 from 'public/pictures/landing_berry1.png'
 import Berry2 from 'public/pictures/landing_berry2.png'
 // import { getCloudberries } from '@/sanity/sanity-utils';
 
-import validator from 'validator';
-import { useState, useRef, useEffect } from 'react';
-import gsap from 'gsap';
+import Contact from './components/landing/Form';
+import Header from './components/landing/Header';
+
 
 
 export default function Home() {
 
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  // const [cloudberriesAmount, setCloudberriesAmount] = useState('');
 
-  const header1 = useRef(null);
-  const header2 = useRef(null);
-  const header3 = useRef(null);
-  const header4 = useRef(null);
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    
-    if (!validator.isEmail(email)) {
-      alert("Virheellinen sähköposti");
-      return;
-    }
-    
-    try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ email, message })
-      });
-
-      if (res.ok) {
-        alert("Viesti lähetetty!");
-        setEmail('');
-        setMessage('');
-      } else {
-        alert("Viestin lähetys epäonnistui");
-      }
-    } catch(error) {
-      console.log(error);
-    }
-    setEmail('');
-    setMessage('');
-  }
-
-  useEffect(() => {
-    // Make sure our elements are available
-    if (header1.current && header2.current && header3.current && header4.current) {
-      // Create a timeline for our animation
-      const timeline = gsap.timeline();
-  
-      // Add animations to the timeline
-      timeline
-        .fromTo(header1.current, { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: 1 })
-        .fromTo(header2.current, { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: 1 })
-        .fromTo(header3.current, { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: 1 })
-        .fromTo(header4.current, { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: 1 });
-    }
-  }, []); 
   
   // getCloudberries().then(data => console.log(data));
 
+  
+
   return (
     <main className="font-PlayFairDisplay text-darkGreen overflow-hidden">
-      <div className='flex flex-col items-center text-center mt-14 md:mt-[150px]'>
-        <h1 ref={header1} 
-          className='flex flex-col text-4xl text-left w-[300px]
-            md:w-full md:flex md:flex-row md:whitespace-nowrap md:items-center md:justify-center md:text-5xl'>
-          Lakka,
-          <span className='md:ml-3'>
-            Lapin Lahja Ihmiselle.
-          </span>
-        </h1>
-        <div className='flex flex-col w-[300px] mt-10 text-2xl space-y-4
-            md:space-y-8 md:w-full md:text-3xl' >
-          <p ref={header2}
-            className='flex
-              md:relative md:flex-col md:items-center md:justify-center md:text-center md:left-[-150px]'>
-            Hehkuva hilla,
-          </p>
-          <p ref={header3}
-            className='relative left-[-20px]
-              md:flex-col md:items-center md:justify-center'>
-            tähtinen timantti,
-          </p>
-          <p ref={header4}
-            className='text-right
-              md:relative md:flex-col md:text-center md:items-center md:justify-center md:right-[-150px]'>
-            säteilevä suomuurain.
-          </p>
-        </div>
-      </div>
+      <Header/> 
       <div className='flex flex-col mt-24 space-x-4 items-center
         md:flex md:flex-row-reverse md:justify-between md:mt-[250px]'>
         <div className='flex flex-col items-center justify-center md:ml-16'>
@@ -163,67 +84,14 @@ export default function Home() {
         </div>
       </div>
       <div>
-        <h5 className='text-4xl md:text-5xl mt-20 md:mt-24 md:text-center' >
+        <h5 className='text-4xl md:text-5xl mt-20 md:mt-24 text-center' >
           Vielä voi tilata!
         </h5>
-        <p className='text-xl md:text-2xl italic md:text-center mt-2 md:mt-4 mb-10 md:mb-14'>
+        <p className='text-xl md:text-2xl italic mt-2 md:mt-4 mb-10 md:mb-14 text-center'>
           Hillaa kerätty: <span className='text-cloudberry'>0 kg / 300 kg </span>
         </p>
       </div>
-      <div className='flex flex-col'>
-        <h5 className='text-4xl mt-16
-        md:text-5xl md:mt-28'>
-          Jos halajat hillaa,
-          otathan yhteyttä.
-        </h5>
-        <div className='flex flex-col mt-12'>
-          <div>
-            <form 
-              id='contactForm'
-              onSubmit={handleSubmit}
-              className='relative w-auto md:w-[60] font-Lora text-3xl overflow-hidden'
-            >
-              <label htmlFor='email'>
-                <h5 className='text-2xl'>
-                  Sähköposti:
-                </h5>
-              </label>
-              <input 
-                type="email"
-                required
-                onChange={(e) => setEmail(e.target.value)}
-                id="email"
-                maxLength={50}
-                minLength={2}
-                className="block w-[300px] text-sm border-darkGreen px-2 py-2 md:p-5 border-2 mt-1"
-                placeholder="Sähköpostisi"
-              />
-              <label htmlFor='message'>
-                <h5 className='text-2xl mt-6'>
-                  Viestisi, kuinka paljon hillaa ja minne:
-                </h5>
-              </label>
-              <textarea
-                type="text"
-                required
-                onChange={(e) => setMessage(e.target.value)}
-                id="message"
-                maxLength={500}
-                minLength={2}
-                className=" align-text-top block w-[300px] h-[100px] text-sm border-darkGreen px-2 md:p-5 border-2 mt-1
-                md:w-[600px] md:h-[250px]"
-                placeholder="Viestisi"
-              />
-              <button
-                type="submit"
-                className="px-10 py-2 border-darkBlue border-[2px] w-auto font-GeneralSans text-base md:text-xl  rounded-full cursor-pointer hover:bg-green-300 duration-300 mt-6"
-              > 
-                Lähetä
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
+      <Contact/>
     </main>
   )
 }

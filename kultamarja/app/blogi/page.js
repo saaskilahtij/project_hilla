@@ -5,11 +5,6 @@ import { getProjects } from "@/sanity/sanity-utils";
 import Image from "next/image";
 
 
-//todo: create animations for the headers using gsap
-// first header should fade in from the left
-// second header should fade in from the right
-
-
 
 export default function Home () {
 
