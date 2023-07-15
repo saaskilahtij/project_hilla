@@ -18,8 +18,50 @@ export default function Home() {
   return (
     <main className="font-PlayFairDisplay text-darkGreen overflow-hidden">
       <Header/> 
+      <div className='flex flex-col mt-24 md:mt-44 items-center'>
+        <h5 className='text-3xl text-center
+        md:text-5xl '>
+          Vielä voi tilata!
+        </h5>
+        <p className='text-center text-2xl mt-2 w-[300px]
+        md:text-4xl md:mt-4'>
+          Kilohintaan:
+        </p>
+        <p className='font-extrabold text-cloudberry text-center mt-2 text-3xl
+        md:text-4xl'>
+          18€ / kg
+        </p>
+        <p className='text-center w-[300px] mt-2 text-xl
+        md:text-2xl'>
+          + toimitus alkaen {' '}
+          <span className='font-extrabold text-cloudberry text-2xl
+          md:text-3xl'>
+            0€
+          </span>
+          ,
+        </p>
+        <p className='text-center w-[300px] text-xl
+        md:text-2xl'>
+          kotiovelle tietenkin -
+        </p>
+        <p className='text-xl text-right
+        md:text-2xl'>
+          Ja etenkin edullisesti.
+        </p>
+      </div>
+      <div className='flex flex-col items-center text-2xl
+        md:text-4xl'>
+        <p className='w-[300px] text-2xl italic text-center mt-6
+        md:text-5xl md:mt-14'>
+          Hillaa kerätty: 
+        </p>
+        <p className='w-[300px] text-center text-cloudberry text-2xl font-extrabold 
+        md:text-4xl md:mt-2 md:w-full'>
+          0 Litraa / 300 Litraa  
+        </p>
+      </div>
       <div className='flex flex-col mt-24 space-x-4 items-center
-        md:flex md:flex-row-reverse md:justify-between md:mt-[250px]'>
+        md:flex md:flex-row-reverse md:justify-between md:mt-36'>
         <div className='flex flex-col items-center justify-center md:ml-16'>
           <Image 
             src={ Berry1 }
@@ -42,10 +84,14 @@ export default function Home() {
           md:w-full md:pb-44'>
           <h4 className='text-4xl font-Lora w-[300px]
           md:w-full md:text-5xl'>
-            Kerätä hillaa, myydä hillaa, on jakaa iloa.
+            Kerätä {' '}
+            <span className='italic text-cloudberry'>hillaa</span>, 
+            myydä {' '}
+            <span className='italic text-cloudberry'>hillaa</span>
+            , on jakaa iloa.
           </h4>
-          <p className='text-lg font-Lora mt-5 
-            md:text-xl'>
+          <p className='text-xl font-Lora mt-5 
+            md:text-2xl'>
             Kolme kaverusta Lapista jakoi idean: Mitäpä jos keräisimme hillaa, 
             tätä Lapin kultaista kaunokaista, ja mitäpä jos kauppaisimme makeuden myös teille. 
             Maista Lapin makeutta! 
@@ -71,21 +117,13 @@ export default function Home() {
           md:w-full md:text-5xl'>
             Tule osaksi tarinaa, osta marjaa makeaa!
           </h5>
-          <p className='text-lg mt-6
-          md:w-full md:pb-24 md:text-xl'>
+          <p className='text-xl mt-6
+          md:w-full md:pb-24 md:text-2xl'>
             Meitä matkaajia voi seurata blogin kautta. 
             Jos osumme lähellesi, tulethan hakemaan meiltä tätä pohjoisen mystistä karkkikukkaa. 
             Ei ole myöskään väärin haluta hillaa kotiovelle, tässä tapauksessa otathan meihin yhteyttä!
           </p>
         </div>
-      </div>
-      <div>
-        <h5 className='text-4xl md:text-5xl mt-20 md:mt-24 text-center' >
-          Vielä voi tilata!
-        </h5>
-        <p className='text-xl md:text-2xl italic md:text-center mt-2 md:mt-4 mb-10 md:mb-14'>
-          Hillaa kerätty: <span className='text-cloudberry'>0 Litraa / 300 Litraa </span>
-        </p>
       </div>
       <Contact/>
     </main>

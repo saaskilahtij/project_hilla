@@ -20,6 +20,7 @@ module.exports = {
     },
     screens : {
       md: "768px",
+      360: "360px",
     },
   },
   plugins: [],
