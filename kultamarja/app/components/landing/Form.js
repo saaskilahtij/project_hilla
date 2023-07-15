@@ -42,8 +42,10 @@ export default function Contact() {
   }
 
 	return (
-		<div className="flex flex-col md:flex-row">
-      <div className='flex flex-col'>
+		<div
+      className="flex flex-col md:flex-row">
+      <div id='contactForm'
+        className='flex flex-col'>
           <h5 className='text-4xl mt-16
           md:text-5xl md:mt-28'>
             Jos halajat hillaa,
@@ -52,7 +54,6 @@ export default function Contact() {
           <div className='flex flex-col mt-12'>
             <div>
               <form 
-                id='contactForm'
                 onSubmit={handleSubmit}
                 className='relative w-auto md:w-[60] font-Lora text-3xl overflow-hidden'
               >
