@@ -3,8 +3,19 @@ import Joonatan from "/public/pictures/headshot_joonatan.jpg";
 import Eero from "/public/pictures/headshot_eero.jpg";
 import Johan from "/public/pictures/headshot_johan.jpeg";
 
-
 import Header from "/app/components/info/Header.js";
+
+export const metadata = {
+  title: 'Kultamarjan info',
+  description: 'Kultamarjan info sisältää tietoa kultamarjan poiminnasta ja poimijoista.',
+  keywords: [
+    "info",
+    "marjanpoimijat",
+    "hillanpoimijat",
+    "hilla",
+    "Kultamarja",
+  ]
+}
 
 
 export default function Home() {

@@ -7,7 +7,6 @@ import Contact from './components/landing/Form';
 import Header from './components/landing/Header';
 
 
-
 export default function Home() {
 
 

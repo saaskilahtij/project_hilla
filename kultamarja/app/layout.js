@@ -7,10 +7,12 @@ import Navbar from './components/Navbar'
 
 const inter = Inter({ subsets: ['latin'] })
 
+
 export const metadata = {
   title: 'Kultamarja ⭐️',
   description: 'Kultamarjan kotisivu, jossa kerrotaan hillanmyynnistä.',
   keywords: [
+    "Kultamarja.fi",
     "hillaa",
     "hillan myynti",
     "hillan keräys",
@@ -25,11 +27,8 @@ export const metadata = {
   ]
 }
 
-// todo: Improve SEO by using Next Metadata
 
-
-
- function RootLayout({ children }) {
+function RootLayout({ children }) {
   return (
     <html lang="fi">
       <head>
