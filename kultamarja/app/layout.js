@@ -4,7 +4,6 @@ import { Inter } from 'next/font/google'
 
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
- 
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -26,12 +25,8 @@ export const metadata = {
   ]
 }
 
-// q: Can I write this entire application in Rust?
-// a: Yes, but you shouldn't.
-// q: Why not?
-// a: Because it's a bad idea.
-// q: Why is it a bad idea?
-// a: Because it's a bad idea.
+// todo: Improve SEO by using Next Metadata
+
 
 
  function RootLayout({ children }) {

@@ -57,7 +57,7 @@ export default function Home() {
         </p>
         <p className='w-[300px] text-center text-cloudberry text-2xl font-extrabold 
         md:text-4xl md:mt-2 md:w-full'>
-          0 Litraa / 300 Litraa  
+          0 <span className='text-darkGreen font-normal'>Litraa /</span> 300 <span className='text-darkGreen font-normal'>Litraa</span>
         </p>
       </div>
       <div className='flex flex-col mt-24 space-x-4 items-center
