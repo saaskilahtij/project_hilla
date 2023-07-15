@@ -1,3 +1,5 @@
+
+
 'use client';
 
 import { useState, useEffect, useRef } from "react";
@@ -5,7 +7,8 @@ import { getProjects } from "@/sanity/sanity-utils";
 import Image from "next/image";
 
 
-const BlogiLayout = () => {
+
+function BlogLayout()  {
 
   const [screenWidth, setScreenWidth] = useState(null);
   const [projects, setProjects] = useState([]);
@@ -81,5 +84,4 @@ const BlogiLayout = () => {
 }
 
 
-
-export default BlogiLayout;
+export default BlogLayout;

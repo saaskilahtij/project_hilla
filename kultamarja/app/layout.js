@@ -24,6 +24,23 @@ export const metadata = {
     "marjan myynti",
     "marjojen myynti",
     "kultamarja",
+    "keräämme hillaa",
+    "hillan osto",
+    "hillan osto oulu",
+    "hillan osto lappi",
+    "hillan osto rovaniemi",
+    "hillan osto pudasjärvi",
+    "hillan osto pello",
+    "hillan osto helsinki",
+    "pääkaupunkiseutu",
+    "osta hillaa helsinki",
+    "hillan osto espoo",
+    "hillan osto vantaa",
+    "hillan osto kauniainen",
+    "hillan osto kerava",
+    "hillan osto tuusula",
+    "hillan osto järvenpää",
+    "hillan osto pääkaupunkiseutu",
   ]
 }
 

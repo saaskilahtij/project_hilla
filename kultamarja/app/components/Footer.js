@@ -44,7 +44,7 @@ export default function Footer() {
                         <ExportSquare size="15" color="#013220"/>
                     </div>
             </div>
-                <div className="flex flex-row w-full justify-between font-PlayFairDisplay italic text-start">
+                <div className="flex flex-row w-full justify-between font-PlayFairDisplay italic text-start mt-4">
                     <p className="mx-5 my-2 text-md">
                         2023 Kultamarja © 
                     </p>

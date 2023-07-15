@@ -1,16 +1,24 @@
 
-import BlogiLayout from "./BlogiLayout";
+import BlogLayout from "./BlogLayout";
+
+// todo: write metadata
 
 export const metadata = {
-  title: 'Kultamarjan blogi',
-  description: 'Kultamarja blogi, jossa päivitetään tietoja myyntireissuista, hinnoista, hillanpoiminnasta jne. markkinoivasti.',
+  title: "Kultamarjan blogi",
+  description: 'Kultamarjan blogi, jossa kerromme hillan keruusta, hillan myynnistä ja muista marjoihin liittyvistä asioista.',
   keywords: [
     "blogi",
-    "Kultamarjan blogi",
     "hillaa",
     "hillan myynti",
     "hillan keräys",
+    "hillaa Oulu",
+    "hillaa Lappi",
+    "hillaa Rovaniemi",
+    "osta hillaa",
+    "keräämme hillaa",
     "hilla",
+    "marjan myynti",
+    "marjojen myynti",
     "Kultamarja",
   ]
 }
@@ -18,6 +26,6 @@ export const metadata = {
 export default function Home () {
 
   return(
-    <BlogiLayout/>
+     <BlogLayout />
     );
 }
