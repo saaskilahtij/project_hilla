@@ -4,7 +4,7 @@ import BlogLayout from "./BlogLayout";
 // todo: write metadata
 
 export const metadata = {
-  title: "Kultamarjan blogi",
+  title: "Kultamarjan blogi 👋🏼",
   description: 'Kultamarjan blogi, jossa kerromme hillan keruusta, hillan myynnistä ja muista marjoihin liittyvistä asioista.',
   keywords: [
     "blogi",

@@ -2,8 +2,8 @@ import TarinaLayout from './TarinaLayout';
 
 
 export const metadata = {
-  title: 'Näin syntyi Kultamarja',
-  description: 'Sivu kertoo Kultamarjan tarinan ja sen synnystä markkinoivasti ja runomuotoinesti.',
+  title: 'Näin syntyi Kultamarja 📝',
+  description: 'Sivu kertoo Kultamarjan tarinan ja sen synnyn markkinoivasti ja runomuotoinesti.',
   keywords: [
     "runous",
     "tarina",

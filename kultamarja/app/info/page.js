@@ -6,7 +6,7 @@ import Johan from "/public/pictures/headshot_johan.jpeg";
 import Header from "/app/components/info/Header.js";
 
 export const metadata = {
-  title: 'Kultamarjan info',
+  title: 'Kultamarjan info 💭',
   description: 'Kultamarjan info sisältää tietoa kultamarjan poiminnasta ja poimijoista.',
   keywords: [
     "info",

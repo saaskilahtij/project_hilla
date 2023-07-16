@@ -1,13 +1,24 @@
 'use client';
 
 import validator from "validator";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 export default function Contact() { 
 	
 	const [email, setEmail] = useState("");
 	const [message, setMessage] = useState("");
+  const [isSent, setIsSent] = useState(false);
+
+
+  useEffect(() => {
+    if (isSent) {
+      console.log('IF');
+      setTimeout(() => {
+        setIsSent(false);
+      }, 5000);
+    }
+  }, [isSent]);
 
 
 	const handleSubmit = async (e) => {
@@ -18,6 +29,8 @@ export default function Contact() {
       return;
     }
     
+    alert("Viestiä lähetetään!");
+
     try {
       const res = await fetch('/api/contact', {
         method: 'POST',
@@ -37,6 +50,7 @@ export default function Contact() {
     } catch(error) {
       console.log(error);
     }
+
     setEmail('');
     setMessage('');
   }
@@ -65,6 +79,7 @@ export default function Contact() {
                 <input 
                   type="email"
                   required
+                  value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   id="email"
                   maxLength={50}
@@ -80,6 +95,7 @@ export default function Contact() {
                 <textarea
                   type="text"
                   required
+                  value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   id="message"
                   maxLength={500}
@@ -90,6 +106,7 @@ export default function Contact() {
                 />
                 <button
                   type="submit"
+                  disabled={isSent}
                   className="px-10 py-2 border-darkBlue border-[2px] w-auto font-GeneralSans text-base md:text-xl  rounded-full cursor-pointer hover:bg-green-300 duration-300 mt-6"
                 > 
                   Lähetä
