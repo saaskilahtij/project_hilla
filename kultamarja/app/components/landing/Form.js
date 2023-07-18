@@ -66,53 +66,51 @@ export default function Contact() {
             otathan yhteyttä.
           </h5>
           <div className='flex flex-col mt-12'>
-            <div>
-              <form 
-                onSubmit={handleSubmit}
-                className='relative w-auto md:w-[60] font-Lora text-3xl overflow-hidden'
-              >
-                <label htmlFor='email'>
-                  <h5 className='text-2xl'>
-                    Sähköposti:
-                  </h5>
-                </label>
-                <input 
-                  type="email"
-                  required
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  id="email"
-                  maxLength={50}
-                  minLength={2}
-                  className="block w-[300px] text-sm border-darkGreen px-2 py-2 md:p-5 border-2 mt-1 rounded-xl"
-                  placeholder="Sähköpostisi"
-                />
-                <label htmlFor='message'>
-                  <h5 className='text-2xl mt-6'>
-                    Viestisi, kuinka paljon hillaa ja minne:
-                  </h5>
-                </label>
-                <textarea
-                  type="text"
-                  required
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  id="message"
-                  maxLength={500}
-                  minLength={2}
-                  className=" align-text-top block w-[300px] h-[100px] text-sm border-darkGreen px-2 md:p-5 border-2 mt-1 rounded-xl
-                  md:w-[600px] md:h-[250px]"
-                  placeholder="Viestisi"
-                />
-                <button
-                  type="submit"
-                  disabled={isSent}
-                  className="px-10 py-2 border-darkBlue border-[2px] w-auto font-GeneralSans text-base md:text-xl  rounded-full cursor-pointer hover:bg-green-300 duration-300 mt-6"
-                > 
-                  Lähetä
-                </button>
-              </form>
-            </div>
+            <form 
+              onSubmit={handleSubmit}
+              className='relative w-auto md:w-[60] font-Lora text-3xl overflow-hidden'
+            >
+            <label htmlFor='email'>
+              <h5 className='text-2xl'>
+                Sähköposti:
+              </h5>
+            </label>
+              <input 
+                type="email"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                id="email"
+                maxLength={50}
+                minLength={2}
+                className="block w-[300px] text-sm border-darkGreen px-2 py-2 md:p-5 border-2 mt-1 rounded-xl"
+                placeholder="Sähköpostisi"
+              />
+              <label htmlFor='message'>
+                <h5 className='text-2xl mt-6'>
+                  Viestisi, kuinka paljon hillaa ja minne:
+                </h5>
+              </label>
+              <textarea
+                type="text"
+                required
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                id="message"
+                maxLength={500}
+                minLength={2}
+                className=" align-text-top block w-[300px] h-[100px] text-sm border-darkGreen px-2 md:p-5 border-2 mt-1 rounded-xl
+                md:w-[600px] md:h-[250px]"
+                placeholder="Viestisi"
+              />
+              <button
+                type="submit"
+                disabled={isSent}
+                className="px-10 py-2 border-darkBlue border-[2px] w-auto font-GeneralSans text-base md:text-xl  rounded-full cursor-pointer hover:bg-green-300 duration-300 mt-6"
+              > 
+                Lähetä
+              </button>
+            </form>
           </div>
         </div>
         {/* <div className="flex flex-col mt-[200px]">

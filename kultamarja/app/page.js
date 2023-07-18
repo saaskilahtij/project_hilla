@@ -1,10 +1,13 @@
 import Image from 'next/image'
 import Berry1 from 'public/pictures/landing_berry1.png'
-import Berry2 from 'public/pictures/landing_berry2.png'
+import Berry2 from 'public/pictures/landing_berry2.png';
 // import { getCloudberries } from '@/sanity/sanity-utils';
 
 import Contact from './components/landing/Form';
 import Header from './components/landing/Header';
+import Cloudberry from './components/landing/Cloudberry';
+
+// todo: update contact forms. Add slider for berry order amount.
 
 
 export default function Home() {
@@ -17,41 +20,11 @@ export default function Home() {
   return (
     <main className="font-PlayFairDisplay text-darkGreen overflow-hidden">
       <Header/> 
-      <div className='flex flex-col mt-24 md:mt-44 items-center'>
-        <h5 className='text-3xl text-center
-        md:text-5xl '>
-          Vielä voi tilata!
-        </h5>
-        <p className='text-center text-2xl mt-2 w-[300px]
-        md:text-4xl md:mt-4'>
-          Kilohintaan:
-        </p>
-        <p className='font-extrabold text-cloudberry text-center mt-2 text-3xl
-        md:text-4xl'>
-          18€ / kg
-        </p>
-        <p className='text-center w-[300px] mt-2 text-xl
-        md:text-2xl'>
-          + toimitus alkaen {' '}
-          <span className='font-extrabold text-cloudberry text-2xl
-          md:text-3xl'>
-            0€
-          </span>
-          ,
-        </p>
-        <p className='text-center w-[300px] text-xl
-        md:text-2xl'>
-          kotiovelle tietenkin -
-        </p>
-        <p className='text-xl text-right
-        md:text-2xl'>
-          Ja etenkin edullisesti.
-        </p>
-      </div>
+      <Cloudberry/>
       <div className='flex flex-col items-center text-2xl
         md:text-4xl'>
-        <p className='w-[300px] text-2xl italic text-center mt-6
-        md:text-5xl md:mt-14'>
+        <p className='w-[300px] text-2xl italic text-center mt-24
+        md:text-5xl md:mt-36'>
           Hillaa kerätty: 
         </p>
         <p className='w-[300px] text-center text-cloudberry text-2xl font-extrabold 
