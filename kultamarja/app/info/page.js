@@ -37,9 +37,14 @@ export default function Home() {
             height={300}
             className="border-2 border-darkGreen shadow-lg"
           />
-          <p className="mt-2 w-[300px] text-start text-xl">
-            Joonatan Höyhtyä 😆
-          </p>
+          <div className="flex flex-row justify-between w-[300px] bg-darkGreen text-vanilla p-3">
+            <p className="text-center text-xl">
+              01
+            </p>
+            <p className="text-center text-xl pr-4">
+              Joonatan Höyhtyä
+            </p>
+          </div>
         </div>
         <div className="flex flex-col items-center justify-center mt-10">
           <Image
@@ -49,9 +54,14 @@ export default function Home() {
             height={300}
             className="border-2 border-darkGreen shadow-lg"
           />
-          <p className="mt-2 w-[300px] text-start text-xl">
-            Topias Hintsala 😎
-          </p>
+          <div className="flex flex-row justify-between w-[300px] bg-darkGreen text-vanilla p-3">
+            <p className="text-center text-xl">
+              02
+            </p>
+            <p className="text-center text-xl pr-4">
+              Topias Hintsala
+            </p>
+          </div>
         </div>
         <div className="flex flex-col items-center justify-center mt-10">
           <Image
@@ -61,9 +71,14 @@ export default function Home() {
             height={300}
             className="border-2 border-darkGreen shadow-lg"
           />
-          <p className="mt-2 w-[300px] text-start text-xl">
-            Johan Sääskilahti 🧐
-          </p>
+          <div className="flex flex-row justify-between w-[300px] bg-darkGreen text-vanilla p-3">
+            <p className="text-center text-xl">
+              03
+            </p>
+            <p className="text-center text-xl pr-4">
+              Johan Sääskilahti
+            </p>
+          </div>
         </div> 
       </div>
     </main>

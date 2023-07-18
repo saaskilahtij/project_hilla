@@ -8,11 +8,6 @@ import { useState, useEffect } from "react";
 import Logo from "/public/pictures/cloudberry.png"
 
 
-// All credit to Don Hämäläinen Boggo Oy who programmed this beauty.
-// Only thing I did was to add the scrollToContact function, changed the content and the styling of the navbar 
-// and the mobile button animation.
-
-
 
 /* MAIN */
 export default function Navbar() {
@@ -89,7 +84,7 @@ export default function Navbar() {
         <div className="z-50 px-5 relative w-screen grid gap-[1rem] grid-cols-12 bg-white bg-opacity-20 backdrop-filter backdrop-blur-md items-center min-h-[60px]">
           {/* TITLE - Navbar Left */}
           <div className="justify-self-start z-50 col-start-1 w-[50px] h-[50px]">
-            <Link href="/" onClick={() => setIsOpen(false)}>
+            <Link href="/" prefetch onClick={() => setIsOpen(false)}>
               <Image
                 src={Logo}
                 alt="Kultamarjan hilla logo"
@@ -113,21 +108,21 @@ export default function Navbar() {
           {/* LINKS - Navbar Middle */}
           <ul className="col-start-6 space-x-24 font-PlayFairDisplay text-2xl justify-self-center md:flex {<-- Normaali //768px Mobiili --> } hidden">
             <li>
-              <Link href="/tarina">
+              <Link href="/tarina" prefetch>
                 <p className="hover:text-cloudberry hover:duration-500">
                   Tarina
                 </p>
               </Link>
             </li>
             <li>
-              <Link href="/blogi">
+              <Link href="/blogi" prefetch>
                 <p className="hover:text-cloudberry hover:duration-500">
                   Blogi
                 </p>
               </Link>
             </li>
             <li>
-              <Link href="/info">
+              <Link href="/info" prefetch>
                 <p className="hover:text-cloudberry hover:duration-500">
                   Info
                 </p>
@@ -187,14 +182,14 @@ export default function Navbar() {
                   </Link>
                 </li>
                 <li>
-                  <Link onClick={() => setIsOpen(false)} href="/blogi">
+                  <Link onClick={() => setIsOpen(false)} href="/blogi" prefetch>
                     <p className="hover:text-vanilla text-cloudberry">
                       Blogi
                     </p>
                   </Link>
                 </li>
                 <li>
-                  <Link onClick={() => setIsOpen(false)} href="/info">
+                  <Link onClick={() => setIsOpen(false)} href="/info" prefetch>
                     <p
                       className="hover:text-vanilla text-cloudberry">
                       Info

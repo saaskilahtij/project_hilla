@@ -16,19 +16,25 @@ export default function Footer() {
             <div className="flex flex-row items-center justify-center space-x-16 mt-20">
                 <p className="text-xl font-PlayFairDisplay
                     md:text-2xl">
-                    <Link href="/tarina">
+                    <Link 
+                      prefetch
+                      href="/tarina">
                         Tarina
                     </Link>
                 </p>
                 <p className="text-xl font-PlayFairDisplay
                     md:text-2xl">
-                    <Link href="/blogi">
+                    <Link 
+                      prefetch  
+                      href="/blogi">
                         Blogi
                     </Link>
                 </p>
                 <p className="text-xl font-PlayFairDisplay
                     md:text-2xl">
-                    <Link href="/info">
+                    <Link 
+                      prefetch  
+                      href="/info">
                         Info
                     </Link>
                 </p>
