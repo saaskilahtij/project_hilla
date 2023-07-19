@@ -176,14 +176,14 @@ export default function Navbar() {
                 <li>
                   <Link onClick={() => setIsOpen(false)} href="/tarina">
                     <p
-                      className="hover:text-vanilla text-cloudberry">
+                      className="hover:text-vanilla text-cloudberry duration-1000">
                       Tarina
                     </p>
                   </Link>
                 </li>
                 <li>
                   <Link onClick={() => setIsOpen(false)} href="/blogi" prefetch>
-                    <p className="hover:text-vanilla text-cloudberry">
+                    <p className="hover:text-vanilla text-cloudberry duration-1000">
                       Blogi
                     </p>
                   </Link>
@@ -191,7 +191,7 @@ export default function Navbar() {
                 <li>
                   <Link onClick={() => setIsOpen(false)} href="/info" prefetch>
                     <p
-                      className="hover:text-vanilla text-cloudberry">
+                      className="hover:text-vanilla text-cloudberry duration-1000">
                       Info
                     </p>
                   </Link>
