@@ -63,7 +63,7 @@ function RootLayout({ children }) {
           }}
         /> */}
       </head>
-      <body className={inter.className}>
+      <body className={inter.className + 'bg-vanilla'}>
         <Navbar/>
         <main className='px-5 mt-20' id='main'>
           {children}

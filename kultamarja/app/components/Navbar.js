@@ -109,21 +109,21 @@ export default function Navbar() {
           <ul className="col-start-6 space-x-24 font-PlayFairDisplay text-2xl justify-self-center md:flex {<-- Normaali //768px Mobiili --> } hidden">
             <li>
               <Link href="/tarina" prefetch>
-                <p className="hover:text-cloudberry hover:duration-500">
+                <p className="mt-5 md:text-2xl hover:text-vanilla hover:bg-darkGreen bg-opacity-50 p-2 rounded-lg duration-1000 hover:border-2 hover:border-vanilla">
                   Tarina
                 </p>
               </Link>
             </li>
             <li>
               <Link href="/blogi" prefetch>
-                <p className="hover:text-cloudberry hover:duration-500">
+                <p className="mt-5 md:text-2xl hover:text-vanilla hover:bg-darkGreen bg-opacity-50 p-2 rounded-lg duration-1000 hover:border-2 hover:border-vanilla">
                   Blogi
                 </p>
               </Link>
             </li>
             <li>
               <Link href="/info" prefetch>
-                <p className="hover:text-cloudberry hover:duration-500">
+                <p className="mt-5 md:text-2xl hover:text-vanilla hover:bg-darkGreen bg-opacity-50 p-2 rounded-lg duration-1000 hover:border-2 hover:border-vanilla">
                   Info
                 </p>
               </Link>
@@ -132,7 +132,7 @@ export default function Navbar() {
           {/* CONTACT - Navbar Right */}
           <div className="col-end-13 justify-self-end md:block {<-- Normaali //768px Mobiili --> } hidden whitespace-nowrap">
             <button onClick={ scrollToContact }>
-              <p className="px-6 py-2 border-2 rounded-xl font-PlayFairDisplay border-darkGreen //HOVER hover:bg-cloudberry hover:duration-500">
+              <p className="px-6 mt-5 py-2 border-2 rounded-xl font-PlayFairDisplay border-darkGreen //HOVER hover:bg-darkGreen hover:text-vanilla hover:border-vanilla hover:duration-1000">
                 Ota Yhteyttä
               </p>
             </button>

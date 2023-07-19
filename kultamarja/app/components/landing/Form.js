@@ -3,17 +3,24 @@
 import validator from "validator";
 import { useEffect, useState } from "react";
 
+import { Puff } from "react-loader-spinner";
+
+
+// todo: create a modal that is shown when the message is being sent and when it's sent.
+
+
 
 export default function Contact() { 
 	
 	const [email, setEmail] = useState("");
 	const [message, setMessage] = useState("");
   const [isSent, setIsSent] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
 
 
   useEffect(() => {
     if (isSent) {
-      console.log('IF');
       setTimeout(() => {
         setIsSent(false);
       }, 5000);
@@ -29,7 +36,7 @@ export default function Contact() {
       return;
     }
     
-    alert("Viestiä lähetetään!");
+    setIsLoading(true);
 
     try {
       const res = await fetch('/api/contact', {
@@ -41,6 +48,7 @@ export default function Contact() {
       });
 
       if (res.ok) {
+        setIsLoading(false);
         alert("Viesti lähetetty!");
         setEmail('');
         setMessage('');
@@ -83,7 +91,8 @@ export default function Contact() {
                 id="email"
                 maxLength={50}
                 minLength={2}
-                className="block w-[300px] text-sm border-darkGreen px-2 py-2 md:p-5 border-2 mt-1 rounded-xl"
+                className="block w-[300px] text-sm border-darkGreen px-2 py-2 md:p-5 border-2 mt-1 rounded-xl
+                hover:border-vanilla hover:bg-darkGreen hover:text-vanilla duration-1000"
                 placeholder="Sähköpostisi"
               />
               <label htmlFor='message'>
@@ -99,17 +108,37 @@ export default function Contact() {
                 id="message"
                 maxLength={500}
                 minLength={2}
-                className=" align-text-top block w-[300px] h-[100px] text-sm border-darkGreen px-2 md:p-5 border-2 mt-1 rounded-xl
-                md:w-[600px] md:h-[250px]"
+                className=" align-text-top block w-[300px] h-[100px] text-sm border-darkGreen p-2 border-2 mt-1 rounded-xl
+                md:w-[600px] md:h-[250px] hover:border-vanilla hover:bg-darkGreen hover:text-vanilla duration-1000"
                 placeholder="Viestisi"
               />
-              <button
-                type="submit"
-                disabled={isSent}
-                className="px-10 py-2 border-darkBlue border-[2px] w-auto font-GeneralSans text-base md:text-xl  rounded-full cursor-pointer hover:bg-green-300 duration-300 mt-6"
-              > 
-                Lähetä
-              </button>
+              <div className="flex flex-row">
+                <button
+                  type="submit"
+                  disabled={isSent}
+                  className="px-10 py-2 border-darkBlue border-[2px] w-auto font-GeneralSans text-base rounded-full mt-6
+                    md:text-xl hover:bg-darkGreen hover:text-vanilla hover:border-vanilla duration-1000"
+                > 
+                  <span className={isLoading ? 'hidden' : 'block'}>
+                    Lähetä
+                  </span>
+                  <div className={
+                  isLoading 
+                  ? 'flex z-10 justify-center items-center'
+                  : 'hidden'}>
+                    <Puff
+                      height="20"
+                      width="20"
+                      radius={1}
+                      color="#FF9204"
+                      ariaLabel="puff-loading"
+                      wrapperStyle={{}}
+                      wrapperClass=""
+                      visible={true}
+                    />
+                  </div>
+                </button>
+              </div>
             </form>
           </div>
         </div>

@@ -42,7 +42,7 @@ export default function Cloudberry() {
               </p>
               <button 
                 onClick={scrollToContact}
-              className='border-2 border-darkGreen px-4 h-[50px] mt-3 hover:bg-darkGreen hover:text-vanilla duration-1000
+              className='border-2 hover:border-vanilla border-darkGreen px-4 h-[50px] mt-3 hover:bg-darkGreen hover:text-vanilla duration-1000
               md:w-[100px] md:h-[40px] md:relative md:bottom-[-27px] md:right-[-220px] rounded-lg'>
                 Tilaa
               </button>
