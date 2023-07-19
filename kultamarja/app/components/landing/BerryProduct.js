@@ -13,8 +13,8 @@ export default function BerryProduct() {
           <path d="M91.6067 116.213L81.0001 105.607L91.6067 95L102.213 105.607L91.6067 116.213Z" fill="#FF9204"/>
         </g>
         <defs>
-          <filter id="filter0_d_78_43" x="0.14209" y="6.2132" width="206.355" height="183.071" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+          <filter id="filter0_d_78_43" x="0.14209" y="6.2132" width="206.355" height="183.071" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+            <feFlood floodOpacity="0" result="BackgroundImageFix"/>
             <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
             <feOffset dy="4"/>
             <feGaussianBlur stdDeviation="2"/>

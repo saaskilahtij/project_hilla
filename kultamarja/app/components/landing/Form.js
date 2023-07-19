@@ -60,20 +60,20 @@ export default function Contact() {
       className="flex flex-col md:flex-row">
       <div id='contactForm'
         className='flex flex-col'>
-          <h5 className='text-4xl mt-16
+          <h1 className='text-4xl mt-16
           md:text-5xl md:mt-28'>
             Jos halajat hillaa,
             otathan yhteyttä.
-          </h5>
+          </h1>
           <div className='flex flex-col mt-12'>
             <form 
               onSubmit={handleSubmit}
               className='relative w-auto md:w-[60] font-Lora text-3xl overflow-hidden'
             >
             <label htmlFor='email'>
-              <h5 className='text-2xl'>
+              <h2 className='text-2xl'>
                 Sähköposti:
-              </h5>
+              </h2>
             </label>
               <input 
                 type="email"
@@ -87,9 +87,9 @@ export default function Contact() {
                 placeholder="Sähköpostisi"
               />
               <label htmlFor='message'>
-                <h5 className='text-2xl mt-6'>
+                <h3 className='text-2xl mt-6'>
                   Viestisi, kuinka paljon hillaa ja minne:
-                </h5>
+                </h3>
               </label>
               <textarea
                 type="text"

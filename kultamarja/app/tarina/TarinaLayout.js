@@ -55,6 +55,7 @@ const TarinaLayout = () => {
             Työn, toimen polte sydämessä kolme kaverusta heräsi - kesäillan hämärässä, kultamarjoja keräsi. 
           </p>
           <Image 
+            priority
             src={Tarina1}
             alt="Hillankerääjät vaeltamassa pimeää taivasta vasten" 
             className="w-[300px] border-4 border-darkGreen shadow-lg mt-4"
@@ -69,6 +70,7 @@ const TarinaLayout = () => {
             Tuulet, puut ja linnut soivat; jäi taakse lämpö, emon hoivat.
           </p>
           <Image
+            priority
             src={Tarina2}
             alt="Lähikuva marjastajan kengästä"
             className="w-[300px] border-4 border-darkGreen shadow-lg mt-4"
@@ -83,6 +85,7 @@ const TarinaLayout = () => {
             päättivät jakaa makean aarteen!
           </p>
           <Image
+            
             src={Tarina3}
             alt="Lähikuva ihmisistä öistä taivasta vasten"
             className="w-[300px] border-4 border-darkGreen shadow-lg mt-4"

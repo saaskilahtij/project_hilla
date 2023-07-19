@@ -50,8 +50,8 @@ function RootLayout({ children }) {
     <html lang="fi">
       <head>
         <link rel='shortcut icon' href='/favicon_io/favicon.ico'/>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-X53N8SKS49"/>
-        <script
+        {/* <script async src="https://www.googletagmanager.com/gtag/js?id=G-X53N8SKS49"/>
+        <scripts
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -61,7 +61,7 @@ function RootLayout({ children }) {
               gtag('config', 'G-X53N8SKS49');
             `,
           }}
-        />
+        /> */}
       </head>
       <body className={inter.className}>
         <Navbar/>

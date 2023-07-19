@@ -56,7 +56,7 @@ export default function Footer() {
                     </p>
                     <p className="mx-5 text-lg">
                         Luku {' '}
-                        <span className="text-cloudberry text-[32px]">
+                        <span className="text-[32px]">
                             1.0
                         </span>
                     </p>
