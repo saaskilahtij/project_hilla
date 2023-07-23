@@ -13,18 +13,25 @@ function BlogLayout()  {
   const [screenWidth, setScreenWidth] = useState(null);
   const [projects, setProjects] = useState([]);
 
-
+  
   useEffect(() => {
-    // set screenWidth when component mounts
-    setScreenWidth(window.innerWidth);
-    // then update screenWidth whenever window resizes
-    const handleResize = () => { setScreenWidth(window.innerWidth) };
-    window.addEventListener('resize', handleResize);
-    getProjects().then(data => setProjects(data));
-
-    // Remember to remove event listener when the component unmounts
-    return () => window.removeEventListener('resize', handleResize);
-  }, [])
+    // Check if window is defined (client-side) before using it
+    if (typeof window !== "undefined") {
+      // set screenWidth when component mounts
+      setScreenWidth(window.innerWidth);
+      // then update screenWidth whenever window resizes
+      const handleResize = () => {
+        setScreenWidth(window.innerWidth);
+      };
+      window.addEventListener("resize", handleResize);
+      
+      // Fetch the projects from the API
+      getProjects().then((data) => setProjects(data));
+      
+      // Remember to remove event listener when the component unmounts
+      return () => window.removeEventListener("resize", handleResize);
+    }
+  }, []);
   
   if (!screenWidth) return null;
 
