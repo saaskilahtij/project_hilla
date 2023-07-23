@@ -12,7 +12,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(null);
 
 
   useEffect(() => {
@@ -27,8 +27,11 @@ export default function Navbar() {
   
 
   useEffect(() => {
+    
     const handleResize = () => {
-      setWindowWidth(window.innerWidth);
+      if (typeof window !== "undefined") {
+        setWindowWidth(window.innerWidth);
+      }
     };
   
     window.addEventListener("resize", handleResize);
