@@ -66,7 +66,7 @@ export default function Contact() {
 
   return (
     <div id="contactForm" className='flex flex-row'>
-       <form>
+       <form onSubmit={handleSubmit}>
         <div className="flex flex-col">
           <h1 className='text-2xl
               md:text-3xl'>
