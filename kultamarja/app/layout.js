@@ -2,8 +2,10 @@ import './globals.css'
 import PropTypes from 'prop-types';
 import { Inter } from 'next/font/google'
 
-import Footer from './components/Footer'
-import Navbar from './components/Navbar'
+//import Footer from './components/Footer';
+import Footer from './components/Foot';
+import Navbar from './components/Navbar';
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -63,7 +65,7 @@ function RootLayout({ children }) {
           }}
         /> */}
       </head>
-      <body className={inter.className + 'bg-vanilla'}>
+      <body className={inter.className}>
         <Navbar/>
         <main className='px-5 mt-20' id='main'>
           {children}

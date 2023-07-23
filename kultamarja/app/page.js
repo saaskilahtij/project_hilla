@@ -3,7 +3,6 @@ import Berry1 from 'public/pictures/landing_berry1.png'
 import Berry2 from 'public/pictures/landing_berry2.png';
 
 
-import Contact from './components/landing/Form';
 import Header from './components/landing/Header';
 import Cloudberry from './components/landing/Cloudberry';
 
@@ -23,7 +22,7 @@ export default function Home() {
         </p>
         <p className='w-[300px] text-center text-darkGreen text-2xl font-extrabold 
         md:text-4xl md:mt-2 md:w-full'>
-          0 <span className='font-normal'>Kg /</span> 300 <span className='font-normal'>Kg</span>
+          15 <span className='font-normal'>Kg /</span> 300 <span className='font-normal'>Kg</span>
         </p>
       </div>
       <div className='flex flex-col mt-24 space-x-4 items-center
@@ -91,7 +90,6 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <Contact/>
     </main>
   )
 }

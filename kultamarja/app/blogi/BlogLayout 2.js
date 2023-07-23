@@ -2,7 +2,7 @@
 
 'use client';
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { getProjects } from "@/sanity/sanity-utils";
 import Image from "next/image";
 
@@ -12,6 +12,8 @@ function BlogLayout()  {
 
   const [screenWidth, setScreenWidth] = useState(null);
   const [projects, setProjects] = useState([]);
+  const header1 = useRef(null);
+  const header2 = useRef(null);
 
 
   useEffect(() => {
@@ -31,10 +33,16 @@ function BlogLayout()  {
   return(
     <main className="flex flex-col justify-center items-center mt-2 font-Lora">
       <div className="font-PlayFairDisplay mt-[50px]">
-        <h1 className="text-4xl 
+        <h1 ref={header1}
+          className="text-4xl 
             md:text-5xl">
           Täällä kerrotaan missä mennään!
         </h1>
+        <h2 ref={header2}
+          className="text-4xl mt-2
+            md:text-5xl">
+          Vielä ei mennä, vielä suunnitellaan.
+        </h2>
       </div>
         {projects.map((project, index) => {
           return(

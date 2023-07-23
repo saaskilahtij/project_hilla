@@ -63,7 +63,74 @@ export default function Contact() {
     setMessage('');
   }
 
-	return (
+
+  return (
+    <div id="contactForm" className='flex flex-row'>
+       <form>
+        <div className="flex flex-col">
+          <h1 className='text-2xl
+              md:text-3xl'>
+            Tilaa meiltä hillaa:
+          </h1>
+          <div className="flex flex-row w-[320px] justify-between mt-1 md:mt-2">
+            <input 
+              type="email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              id="email"
+              maxLength={50}
+              minLength={2}
+              className="block w-[150px] text-sm border-darkGreen px-2 md:p-5 border-2 mt-2 rounded-xl
+              hover:border-vanilla hover:bg-darkGreen hover:text-vanilla duration-1000"
+              placeholder="Sähköposti"
+            />
+            <div className="flex flex-row">
+              <button
+                type="submit"
+                disabled={isSent}
+                className="px-10 py-2 border-darkBlue border-[2px] w-auto font-GeneralSans text-base rounded-full mt-2
+                  md:text-xl hover:bg-darkGreen hover:text-vanilla hover:border-vanilla duration-1000"
+              > 
+                <span className={isLoading ? 'hidden' : 'block'}>
+                  Lähetä
+                </span>
+                <div className={
+                isLoading 
+                ? 'flex z-10 justify-center items-center'
+                : 'hidden'}>
+                  <Puff
+                    height="20"
+                    width="20"
+                    radius={1}
+                    color="#FF9204"
+                    ariaLabel="puff-loading"
+                    wrapperStyle={{}}
+                    wrapperClass=""
+                    visible={true}
+                  />
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <textarea
+          type="text"
+          required
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          id="message"
+          maxLength={500}
+          minLength={2}
+          className=" align-text-top block w-[320px] h-[120px] text-sm border-darkGreen p-2 border-2 mt-3 rounded-xl
+          md:w-[600px] md:h-[250px] hover:border-vanilla hover:bg-darkGreen hover:text-vanilla duration-1000"
+          placeholder="Paljonko? Minne? Kotiinkuljetuksella?"
+        />
+      </form>
+    </div>
+  );
+
+	/* return (
 		<div
       className="flex flex-col md:flex-row">
       <div id='contactForm'
@@ -142,15 +209,15 @@ export default function Contact() {
             </form>
           </div>
         </div>
-        {/* <div className="flex flex-col mt-[200px]">
+        <div className="flex flex-col mt-[200px]">
           <p>
             Tai ota toimi käteen ja soita:
           </p>
           <p>
             CONTACT 0452758597
           </p>
-        </div> */}
+        </div>
       </div>
-	);
+	); */
 
 }
