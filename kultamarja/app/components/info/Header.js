@@ -40,11 +40,11 @@ export default function Header() {
   return (
     <div>
       <h1 ref={header}
-          className="font-PlayFairDisplay text-4xl w-[300px] mt-10
-            md:w-full md:text-center md:text-5xl md:mt-24">
+          className="font-PlayFairDisplay text-4xl w-[300px]
+            md:w-full md:text-center md:text-5xl md:mt-10">
           Mielitsetkö Lapin kultaista marjaa?
         </h1>
-        <div className="md:flex md:flex-row md:justify-between md:mt-16">
+        <div className="md:flex md:flex-row md:justify-between md:mt-2">
           <div ref={paragraph}
             className="flex flex-col w-[300px] mt-10 text-xl
               md:w-[600px] md:mx-6 md:text-2xl">

@@ -34,7 +34,7 @@ function BlogLayout()  {
   if (!screenWidth) return null;
 
   return(
-    <main className="flex flex-col justify-center items-center mt-2 font-Lora">
+    <main className="flex flex-col justify-center items-center font-Lora">
       <div className="font-PlayFairDisplay mt-[50px]">
         <h1 className="text-4xl 
             md:text-5xl">
@@ -44,8 +44,8 @@ function BlogLayout()  {
         {projects.map((project, index) => {
           return(
             <div key={index} id={project._id}
-              className="w-[300px] mt-24
-              md:w-[600px]">
+              className="w-[300px] mt-14 
+              md:w-[600px] md:mt-24">
               <div className="flex flex-row justify-between text-xl
               md:text-2xl">
                 <h1>{project.title}</h1>

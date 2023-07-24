@@ -22,14 +22,14 @@ export default function Home() {
 
 
   return(
-    <main className='flex flex-col items-center justify-center font-Lora mt-22'>
+    <main className='flex flex-col items-center justify-center font-Lora'>
       <Header/>
-      <div className="mt-16 md:w-full md:mt-[200px]">
+      <div className="mt-16 md:w-full md:mt-[150px]">
         <h2 className="text-4xl w-[300px] text-center
         md:w-full">
           Kultamarjan kultaiset poimijat: 
         </h2>
-        <div className="flex flex-col items-center justify-center mt-10 md:mt-24">
+        <div className="flex flex-col items-center justify-center mt-10 md:mt-14">
           <Image
             src={Joonatan}
             alt="Marjanpoimija Joonatan"

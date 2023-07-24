@@ -39,8 +39,8 @@ const TarinaLayout = () => {
 
 
   return(
-    <main className='flex flex-col font-Lora md:mt-20 justify-center items-center'>
-      <div className='mt-10 md:mt-[100px]'>
+    <main className='flex flex-col font-Lora justify-center items-center'>
+      <div className='md:mt-10'>
         <h1 ref={header}
           className="text-4xl text-center md:text-5xl">
           <span>Minäpä kerron - </span>

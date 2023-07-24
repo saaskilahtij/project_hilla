@@ -7,6 +7,8 @@ import Logo from '/public/pictures/cloudberry.png';
 
 
 
+
+
 export default function Navbar() {
   
   const [menuOpen, setMenuOpen] = useState(false);
@@ -64,8 +66,6 @@ export default function Navbar() {
   }, [prevScrollPos, visible]);
   
 
-
-
   return (
     <nav className={`sticky z-50 top-0 bg-vanilla ${visible ? 'translate-y-[0%] duration-1000' : 'translate-y-[-100%] duration-1000'}`}>
       <div className="font-PlayFairDisplay flex 
@@ -101,7 +101,7 @@ export default function Navbar() {
             />
           </div>
           <li className="text-center" onClick={() => {
-              if (windowWidth < 768) {
+              if (windowWidth < 768 && menuOpen) {
                 setMenuOpen(!menuOpen);
               }
             }}>
@@ -116,7 +116,7 @@ export default function Navbar() {
             </Link>
           </li>
           <li className="text-center" onClick={() => {
-              if (windowWidth < 768) {
+              if (windowWidth < 768 && menuOpen) {
                 setMenuOpen(!menuOpen);
               }
             }}>
@@ -131,7 +131,7 @@ export default function Navbar() {
             </Link> 
           </li>
           <li className="text-center" onClick={() => {
-            if (windowWidth < 768) {
+            if (windowWidth < 768 && menuOpen) {
               setMenuOpen(!menuOpen);
             }
           }}>
