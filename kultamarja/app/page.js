@@ -22,7 +22,7 @@ export default function Home() {
         </p>
         <p className='w-[300px] text-center text-darkGreen text-2xl font-extrabold 
         md:text-4xl md:mt-2 md:w-full'>
-          27 <span className='font-normal'>Kg /</span> 300 <span className='font-normal'>Kg</span>
+          50 <span className='font-normal'>Kg /</span> 300 <span className='font-normal'>Kg</span>
         </p>
       </div>
       <div className='flex flex-col mt-24 space-x-4 items-center
