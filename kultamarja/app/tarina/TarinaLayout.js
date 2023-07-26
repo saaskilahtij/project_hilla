@@ -48,24 +48,25 @@ const TarinaLayout = () => {
         </h1>
       </div>
       <div ref={sections}>
-        <div 
-          className='flex flex-col items-center w-[300px] mx-auto text-lg p-5 rounded-xl mt-10 md:mt-24
-            md:flex md:flex-row md:w-[600px] md:text-xl'>
-          <p className='md:mr-6'>
-            Työn, toimen polte sydämessä kolme kaverusta heräsi - kesäillan hämärässä, kultamarjoja keräsi. 
-          </p>
-          <Image 
-            priority
-            src={Tarina1}
-            alt="Hillankerääjät vaeltamassa pimeää taivasta vasten" 
-            className="w-[300px] border-4 border-darkGreen shadow-lg mt-4"
-          />
+        <div className='bg-vanilla md:bg-opacity-0 w-screen my-auto'>
+          <div 
+            className='flex flex-col items-center w-[300px] mx-auto text-lg p-5 mt-10 md:mt-24
+              md:flex md:flex-row md:w-[600px] md:text-xl'>
+            <p className='md:mr-6'>
+              Työn, toimen polte sydämessä kolme kaverusta heräsi - kesäillan hämärässä, kultamarjoja keräsi. 
+            </p>
+            <Image 
+              priority
+              src={Tarina1}
+              alt="Hillankerääjät vaeltamassa pimeää taivasta vasten" 
+              className="w-[300px] border-4 border-darkGreen shadow-lg mt-4"
+            />
+          </div>
         </div>
-        <div className='mt-4 md:mt-8 h-[2px] w-[300px] bg-cloudberry md:hidden'/>
         <div 
-          className='flex flex-col items-center w-[300px] mx-auto text-lg p-5 rounded-xl
+          className='flex flex-col items-center w-[300px] mx-auto text-lg p-5
             md:flex md:flex-row-reverse md:w-[600px] md:text-xl'>
-          <p className='mt-4 md:mt-8 md:ml-10'>
+          <p className='mt-4 md:mt-8 md:ml-10 my-auto'>
             Lapin yön yli kulkivat, kera kesäisen taivaan.
             Tuulet, puut ja linnut soivat; jäi taakse lämpö, emon hoivat.
           </p>
@@ -76,22 +77,21 @@ const TarinaLayout = () => {
             className="w-[300px] border-4 border-darkGreen shadow-lg mt-4"
           />
         </div>
-        <div className='mt-4 md:mt-8 h-[2px] w-[300px] bg-cloudberry md:hidden'/>
-        <div 
-          className='flex flex-col items-center w-[300px] mx-auto text-lg p-5 rounded-xl
-            md:flex md:flex-row md:w-[600px] md:text-xl'>
-          <p className='mt-8 md:mr-6'>
-            Saivatpahan hyvän aatteen -
-            päättivät jakaa makean aarteen!
-          </p>
-          <Image
-            
-            src={Tarina3}
-            alt="Lähikuva ihmisistä öistä taivasta vasten"
-            className="w-[300px] border-4 border-darkGreen shadow-lg mt-4"
-          />
+        <div className='bg-vanilla md:bg-opacity-0 w-screen'>
+          <div 
+            className='flex flex-col items-center w-[300px] mx-auto text-lg p-5 rounded-xl
+              md:flex md:flex-row md:w-[600px] md:text-xl'>
+            <p className='mt-8 md:mr-6'>
+              Saivatpahan hyvän aatteen -
+              päättivät jakaa makean aarteen!
+            </p>
+            <Image
+              src={Tarina3}
+              alt="Lähikuva ihmisistä öistä taivasta vasten"
+              className="w-[300px] border-4 border-darkGreen shadow-lg mt-4"
+            />
+          </div>
         </div>
-        <div className='mt-4 md:mt-8 h-[2px] w-[300px] bg-cloudberry md:hidden'/>
         <div 
           className='flex flex-col items-center w-[300px] mx-auto text-lg p-5 rounded-xl
             md:flex md:flex-row-reverse md:w-[600px] md:text-xl'>
@@ -105,21 +105,21 @@ const TarinaLayout = () => {
             className="w-[300px] border-4 border-darkGreen shadow-lg mt-4"
           />
         </div>
-        <div className='mt-4 md:mt-8 h-[2px] w-[300px] bg-cloudberry md:hidden'/>
-        <div 
-          className='flex flex-col items-center w-[300px] mx-auto text-lg p-5 rounded-xl
-            md:flex md:flex-row md:w-[600px] md:text-xl'>
-          <p className='mt-8 md:mr-6'>
-            Pääsivätpä suurelle kirkolle, hilloja Pekalle, Pirkolle,
-            asukkaille, viranhaltijoille. Koko Suomen suurelle kansalle!
-          </p>
-          <Image
-            src={Tarina5}
-            alt="Kuva Helsingin Tuomiokirkosta"
-            className="w-[300px] border-4 border-darkGreen shadow-lg mt-4"
-          />
+        <div className='md:bg-opacity-0 bg-vanilla w-screen'>
+          <div 
+            className='flex flex-col items-center w-[300px] mx-auto text-lg p-5 rounded-xl
+              md:flex md:flex-row md:w-[600px] md:text-xl'>
+            <p className='mt-8 md:mr-6'>
+              Pääsivätpä suurelle kirkolle, hilloja Pekalle, Pirkolle,
+              asukkaille, viranhaltijoille. Koko Suomen suurelle kansalle!
+            </p>
+            <Image
+              src={Tarina5}
+              alt="Kuva Helsingin Tuomiokirkosta"
+              className="w-[300px] border-4 border-darkGreen shadow-lg mt-4"
+            />
+          </div>
         </div>
-        <div className='mt-4 md:mt-8 h-[2px] w-[300px] bg-cloudberry md:hidden'/>
         <div
           className='flex flex-col items-center w-[300px] mx-auto text-lg p-5 rounded-xl
             md:flex md:flex-row-reverse md:w-[600px] md:text-xl'>
