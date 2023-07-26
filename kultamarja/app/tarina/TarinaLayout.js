@@ -47,10 +47,10 @@ const TarinaLayout = () => {
           <span>kultamarjan kohtalosta</span>
         </h1>
       </div>
-      <div ref={sections}>
+      <div ref={sections} className="mt-10">
         <div className='bg-vanilla md:bg-opacity-0 w-screen my-auto'>
           <div 
-            className='flex flex-col items-center w-[300px] mx-auto text-lg p-5 mt-10 md:mt-24
+            className='flex flex-col items-center w-[300px] mx-auto text-lg p-4 mt-10 md:mt-24
               md:flex md:flex-row md:w-[600px] md:text-xl'>
             <p className='md:mr-6'>
               Työn, toimen polte sydämessä kolme kaverusta heräsi - kesäillan hämärässä, kultamarjoja keräsi. 
@@ -64,7 +64,7 @@ const TarinaLayout = () => {
           </div>
         </div>
         <div 
-          className='flex flex-col items-center w-[300px] mx-auto text-lg p-5
+          className='flex flex-col items-center w-[300px] mx-auto text-lg p-4
             md:flex md:flex-row-reverse md:w-[600px] md:text-xl'>
           <p className='mt-4 md:mt-8 md:ml-10 my-auto'>
             Lapin yön yli kulkivat, kera kesäisen taivaan.
@@ -79,7 +79,7 @@ const TarinaLayout = () => {
         </div>
         <div className='bg-vanilla md:bg-opacity-0 w-screen'>
           <div 
-            className='flex flex-col items-center w-[300px] mx-auto text-lg p-5 rounded-xl
+            className='flex flex-col items-center w-[300px] mx-auto text-lg p-4
               md:flex md:flex-row md:w-[600px] md:text-xl'>
             <p className='mt-8 md:mr-6'>
               Saivatpahan hyvän aatteen -
@@ -93,9 +93,9 @@ const TarinaLayout = () => {
           </div>
         </div>
         <div 
-          className='flex flex-col items-center w-[300px] mx-auto text-lg p-5 rounded-xl
+          className='flex flex-col items-center w-[300px] mx-auto text-lg p-4
             md:flex md:flex-row-reverse md:w-[600px] md:text-xl'>
-          <p className='mt-4 md:mt-8 md:ml-10'>
+          <p className='md:mt-8 md:ml-10'>
             Kauaksi kulkivat Pohjolan pojat; riensivät, polkivat, taivalsivat.
             Yli suon ja metsän suuren ojan, yhtenä  voimana askelsivat. 
           </p>
@@ -107,7 +107,7 @@ const TarinaLayout = () => {
         </div>
         <div className='md:bg-opacity-0 bg-vanilla w-screen'>
           <div 
-            className='flex flex-col items-center w-[300px] mx-auto text-lg p-5 rounded-xl
+            className='flex flex-col items-center w-[300px] mx-auto text-lg p-4
               md:flex md:flex-row md:w-[600px] md:text-xl'>
             <p className='mt-8 md:mr-6'>
               Pääsivätpä suurelle kirkolle, hilloja Pekalle, Pirkolle,
@@ -121,9 +121,9 @@ const TarinaLayout = () => {
           </div>
         </div>
         <div
-          className='flex flex-col items-center w-[300px] mx-auto text-lg p-5 rounded-xl
+          className='flex flex-col items-center w-[300px] mx-auto text-lg p-4
             md:flex md:flex-row-reverse md:w-[600px] md:text-xl'>
-          <p className='mt-4 md:mt-8 md:ml-10'>
+          <p className='md:mt-8 md:ml-10'>
             Leudot Lapin pojat marjan tuopi, kun lakkaa Pohjan ukko suopi!
             Suo meille ilo, kunnia, teille hillaa punnita.
           </p>
