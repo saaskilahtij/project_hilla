@@ -28,7 +28,7 @@ export default function Header() {
  
 
   return (
-    <div className='flex flex-col items-center text-center md:mt-[150px]'>
+    <div className='flex flex-col items-center text-center'>
         <h1 ref={header1} 
           className='flex flex-col text-4xl text-left w-[300px]
             md:w-full md:flex md:flex-row md:whitespace-nowrap md:items-center md:justify-center md:text-5xl'>

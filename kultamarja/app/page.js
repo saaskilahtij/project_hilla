@@ -84,9 +84,8 @@ export default function Home() {
           </h2>
           <p className='text-xl mt-6
           md:w-full md:pb-24 md:text-2xl'>
-            Meitä matkaajia voi seurata blogin kautta. 
-            Jos osumme lähellesi, tulethan hakemaan meiltä tätä pohjoisen mystistä karkkikukkaa. 
-            Ei ole myöskään väärin haluta hillaa kotiovelle, tässä tapauksessa otathan meihin yhteyttä!
+            Meitä matkaajia voi seurata blogin kautta. Me toimitamme, kuljetamme ja postitamme hillaa.
+            Ei ole väärin haluta hillaa kotiovelle, tässä tapauksessa otathan meihin yhteyttä!
           </p>
         </div>
       </div>

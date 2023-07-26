@@ -50,7 +50,7 @@ export default function Header() {
               md:w-[600px] md:mx-6 md:text-2xl">
             <p>
               Keräämme hilloja sekä teemme matkoja Suomen sisällä kaupataksemme nämä ihanat makeiset. 
-              Reittejä ja matkoja ei ole vielä päätetty, mutta suunnittelemme matkoja valtakunnallisesti.
+              Voimme postittaa, kuljettaa tai voitte itse noutaa marjat. 
             </p>
             <p className="mt-2">
               Jos haluat seurata matkaamme ja tietää missä mennään, suosittelen {' '}

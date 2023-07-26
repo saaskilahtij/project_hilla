@@ -58,7 +58,7 @@ export default function Footer() {
             </ul>
           </div>
           {/* SVG ELEMENTS */}
-          <div className='flex flex-row mt-8 justify-between'>
+          <div className='flex flex-row md:mt-8 mt-12 justify-between'>
             <div>
               <svg width="90" height="99" viewBox="0 0 50 59" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M4.21539 46L25 10L45.7846 46H4.21539Z" fill="#013220" stroke="#FF9204"/>

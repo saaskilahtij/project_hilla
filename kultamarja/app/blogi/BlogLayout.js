@@ -34,7 +34,7 @@ function BlogLayout()  {
   if (!screenWidth) return null;
 
   return(
-    <main className="flex flex-col justify-center items-center font-Lora">
+    <main className="flex flex-col justify-center items-center font-Lora overflow-hidden">
       <div className="font-PlayFairDisplay mt-[50px]">
         <h1 className="text-4xl 
             md:text-5xl">

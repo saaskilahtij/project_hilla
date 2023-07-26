@@ -22,7 +22,7 @@ export default function Home() {
 
 
   return(
-    <main className='flex flex-col items-center justify-center font-Lora'>
+    <main className='flex flex-col items-center justify-center font-Lora overflow-hidden'>
       <Header/>
       <div className="mt-16 md:w-full md:mt-[150px]">
         <h2 className="text-4xl w-[300px] text-center

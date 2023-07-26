@@ -39,7 +39,7 @@ const TarinaLayout = () => {
 
 
   return(
-    <main className='flex flex-col font-Lora justify-center items-center'>
+    <main className='flex flex-col font-Lora justify-center items-center overflow-hidden'>
       <div className='md:mt-10'>
         <h1 ref={header}
           className="text-4xl text-center md:text-5xl">

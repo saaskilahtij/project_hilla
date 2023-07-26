@@ -38,7 +38,7 @@ export default function Cloudberry() {
                 </span>
               </p>
               <p className='hidden md:block md:relative md:bottom-[-75px] italic'>
-                Keräämättä: 300kg 
+                Keräämättä: 250kg 
               </p>
               <button 
                 onClick={scrollToContact}
