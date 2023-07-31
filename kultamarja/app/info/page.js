@@ -29,7 +29,7 @@ export default function Home() {
         md:w-full">
           Kultamarjan kultaiset poimijat: 
         </h2>
-        <div className="flex flex-col md:flex-row mt-6">
+        <div className="flex flex-col md:flex-row mt-6 justify-center">
           <div className="flex flex-col items-center justify-center">
             <Image
               src={Joonatan}
