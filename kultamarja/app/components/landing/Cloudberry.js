@@ -45,9 +45,7 @@ export default function Cloudberry() {
                 onClick={scrollToContact}
               className='border-2 hover:border-vanilla border-darkGreen px-4 h-[50px] mt-3 hover:bg-darkGreen hover:text-vanilla duration-1000
               md:w-[100px] md:h-[40px] md:relative md:bottom-[-27px] md:right-[-220px] rounded-lg'>
-              <span className="absolute left-[-2px] bottom-[15px] h-[4px] w-[100px] rounded-sm bg-darkGreen rotate-45" />
                 Tilaa
-              <span className="absolute left-[-2px] bottom-[15px] h-[4px] w-[100px] rounded-sm bg-darkGreen -rotate-45" />
               </button>
             </div>
           </div>
